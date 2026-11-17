@@ -1,0 +1,222 @@
+{
+  "category": "directory",
+  "contact_phones": [],
+  "coverage": {
+    "backend_cluster_note": null,
+    "coverage_last_verified": null,
+    "covers": [
+      "AlabamaCourtRecords.us",
+      "AlaskaCourtRecords.us",
+      "ArizonaCourtRecords.us",
+      "ArkansasCourtRecords.us",
+      "CaliforniaCourtRecords.us",
+      "ColoradoCourtRecords.us",
+      "ConnecticutCourtRecords.us",
+      "DelawareCourtRecords.us",
+      "FloridaCourtRecords.us",
+      "GeorgiaCourtRecords.us",
+      "IdahoCourtRecords.us",
+      "IllinoisCourtRecords.us",
+      "IndianaCourtRecords.us",
+      "IowaCourtRecords.us",
+      "KansasCourtRecords.us",
+      "KentuckyCourtRecords.us",
+      "LouisianaCourtRecords.us",
+      "MaineCourtRecords.us",
+      "MarylandCourtRecords.us",
+      "MassachusetssCourtRecords.us",
+      "MassachusettsCourtRecords.us",
+      "MichiganCourtRecords.us",
+      "MinnesotaCourtRecords.us",
+      "MississippiCourtRecords.us",
+      "MissouriCourtRecords.us",
+      "MontanaCourtRecords.us",
+      "NebraskaCourtRecords.us",
+      "NevadaCourtRecords.us",
+      "NewHampshireCourtRecords.us",
+      "NewJerseyCourtRecords.us",
+      "NewMexicoCourtRecords.us",
+      "NewYorkCourtRecords.us",
+      "NorthCarolinaCourtRecords.us",
+      "NorthDakotaCourtRecords.us",
+      "OhioCourtRecords.us",
+      "OklahomaCourtRecords.us",
+      "OregonCourtRecords.us",
+      "PennsylvaniaCourtRecords.us",
+      "RhodeIslandCourtRecord.us",
+      "RhodeIslandCourtRecords.us",
+      "SouthCarolinaCourtRecords.us",
+      "SouthDakotaCourtRecords.us",
+      "TennesseeCourtRecords.us",
+      "TexasCourtRecords.us",
+      "UtahCourtRecords.us",
+      "VermontCourtRecords.us",
+      "VirginiaCourtRecords.us",
+      "WashingtonCourtRecords.us",
+      "WestVirginiaCourtRecords.us",
+      "WisconsinCourtRecords.us",
+      "WyomingCourtRecords.us"
+    ],
+    "parent_broker_id": null,
+    "parent_network": "CourtRecords.us"
+  },
+  "deletion_lane": null,
+  "false_success_traps": [
+    "A sent form is not a removal. This project never counts this broker as done until a later check shows the listing is gone.",
+    "The \"Your Privacy Choices\" page is only information. Opening it sends nothing.",
+    "The public page is a teaser in front of a paywall, not a full report. Do not pay or sign up to check your listing.",
+    "The state sites share one removal system. A request on one state site may not need repeating on another, but check each listing you found."
+  ],
+  "genuine_confirmation": null,
+  "id": "courtrecords-us",
+  "knowledge_verification": {
+    "catalog_last_reviewed": "2026-05-31",
+    "dates": {
+      "blind_opt_out": null,
+      "coverage": null,
+      "deletion_lane": null,
+      "knowledge": null,
+      "opt_out_url": "2026-07-09",
+      "playbook": "2026-07-09",
+      "primary_source": "2026-07-09"
+    },
+    "evidence_grade": "C",
+    "knowledge_block_status": null,
+    "last_verified": "2026-07-09",
+    "last_verified_source": "playbook",
+    "metadata_confidence": "research_only",
+    "status": "verified"
+  },
+  "name": "CourtRecords.us",
+  "opt_out_routes": [
+    {
+      "email": null,
+      "listing_free": null,
+      "method": "web_form",
+      "note": null,
+      "source": "curated",
+      "url": "https://courtrecords.us/optout/",
+      "via_broker_id": null
+    },
+    {
+      "email": "privacy@courtrecords.us",
+      "listing_free": null,
+      "method": "email",
+      "note": "Use the privacy address to follow up on a rights request. Do this when the state-site removal form is blocked or incomplete.",
+      "source": "module_metadata",
+      "url": null,
+      "via_broker_id": null
+    }
+  ],
+  "opt_out_url_check": {
+    "checked": "2026-11-16",
+    "note": "The page loads with the title \"Your Privacy Choices\". It is an information page that links to a \"Do Not Sell or Share My Personal Information\" form and gives the privacy email address. A terms notice with \"I Agree\" covers the page first.",
+    "result": "loaded",
+    "url": "https://courtrecords.us/optout/"
+  },
+  "parent_company": null,
+  "parent_contact_domains": [],
+  "playbook": {
+    "guided_workflow_types": [
+      "assisted_privacy_form",
+      "rights_request_email"
+    ],
+    "omitted_step_count": 0,
+    "quirks": [
+      "A sent form is not a removal claim. Wait until a check confirms the listing is gone.",
+      "State sites share the same form and members.courtrecords.us removal backend.",
+      "The public scan shows a teaser page behind a paywall. It is not a full court-record report."
+    ],
+    "steps": [
+      "Open the \"Your Privacy Choices\" page. Each state site in this network has the same page at the same path on its own address.",
+      "Follow the link to the \"Do Not Sell or Share My Personal Information\" form and send your request there.",
+      "If the form is blocked or incomplete, email privacy@courtrecords.us with your request.",
+      "Check later that the listing is gone. Do not count the request as done before that."
+    ],
+    "steps_source": "curated",
+    "suppression_lane": null
+  },
+  "provenance": [
+    {
+      "field": "false_success_traps",
+      "ref": "electron/services/brokerCatalog.ts",
+      "source": "repo_doc"
+    },
+    {
+      "field": "false_success_traps",
+      "ref": "https://courtrecords.us/optout/",
+      "source": "broker_page"
+    },
+    {
+      "field": "false_success_traps",
+      "ref": "src/brokers/courtrecords.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "opt_out_url",
+      "ref": "src/brokers/courtrecords.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "steps",
+      "ref": "electron/services/brokerCatalog.ts",
+      "source": "repo_doc"
+    },
+    {
+      "field": "steps",
+      "ref": "https://courtrecords.us/optout/",
+      "source": "broker_page"
+    },
+    {
+      "field": "steps",
+      "ref": "src/brokers/courtrecords.ts",
+      "source": "module_code"
+    }
+  ],
+  "requirements": {
+    "account": null,
+    "browser_challenge_expected": false,
+    "captcha_expected": false,
+    "captcha_likelihood": "low",
+    "date_of_birth": false,
+    "email_confirmation": false,
+    "government_id": null,
+    "identity_fields": null,
+    "listing_url": null,
+    "manual_fallback_required": true,
+    "phone": null,
+    "required_actions": [
+      "preview/paywall funnel",
+      "assisted privacy request",
+      "email fallback available"
+    ],
+    "session_bound_confirmation": false
+  },
+  "site_domains": [
+    "courtrecords.us"
+  ],
+  "specialty_report": null,
+  "status": {
+    "listing_discovery_retired": false,
+    "opt_out_support": "assisted",
+    "reason": null,
+    "removal_reliability": "low",
+    "state": "active"
+  },
+  "timing": {
+    "est_processing_days": null,
+    "expected_removal_days": "1-14 days",
+    "expected_turnaround": null,
+    "first_check_days": 14,
+    "later_check_days": [
+      30,
+      90
+    ],
+    "ongoing_recheck_days": 90,
+    "reappearance_risk": null
+  },
+  "verification": {
+    "automated_recheck_unavailable": false,
+    "support": "assisted"
+  }
+}

@@ -1,0 +1,825 @@
+{
+  "$id": "broker.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "description": "Opt-out and verification knowledge for one data broker. null means the source project has no data for that field; it never means \"no\".",
+  "properties": {
+    "category": {
+      "type": "string"
+    },
+    "contact_phones": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "coverage": {
+      "additionalProperties": false,
+      "properties": {
+        "backend_cluster_note": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "coverage_last_verified": {
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "covers": {
+          "description": "Sister sites, by name, that a request here may also affect. Each needs its own check.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "parent_broker_id": {
+          "description": "When set, work on that parent broker first.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "parent_network": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "parent_network",
+        "parent_broker_id",
+        "covers",
+        "coverage_last_verified",
+        "backend_cluster_note"
+      ],
+      "type": "object"
+    },
+    "deletion_lane": {
+      "additionalProperties": false,
+      "description": "A follow-up request to delete stored data, made after the opt-out. Not the starting route.",
+      "properties": {
+        "email": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "last_verified": {
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "prefer_deletion": {
+          "description": "true when the follow-up is worth offering to the user every time.",
+          "type": "boolean"
+        },
+        "via": {
+          "description": "in_flow: part of the opt-out form. email: by email. email_followup: by email after the opt-out.",
+          "enum": [
+            "in_flow",
+            "email",
+            "email_followup"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "via",
+        "email",
+        "prefer_deletion",
+        "notes",
+        "last_verified"
+      ],
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "false_success_traps": {
+      "description": "Things that look like success but are not.",
+      "items": {
+        "type": "string"
+      },
+      "type": [
+        "array",
+        "null"
+      ]
+    },
+    "genuine_confirmation": {
+      "description": "What the broker shows when a request was really accepted.",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "id": {
+      "pattern": "^[a-z0-9][a-z0-9_-]*$",
+      "type": "string"
+    },
+    "knowledge_verification": {
+      "additionalProperties": false,
+      "properties": {
+        "catalog_last_reviewed": {
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "dates": {
+          "additionalProperties": false,
+          "properties": {
+            "blind_opt_out": {
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "coverage": {
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "deletion_lane": {
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "knowledge": {
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "opt_out_url": {
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "playbook": {
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "primary_source": {
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}",
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "knowledge",
+            "playbook",
+            "primary_source",
+            "opt_out_url",
+            "coverage",
+            "deletion_lane",
+            "blind_opt_out"
+          ],
+          "type": "object"
+        },
+        "evidence_grade": {
+          "description": "Source project grade for the evidence behind this entry, A (best) to D.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "knowledge_block_status": {
+          "description": "Stricter mark. Only \"verified\" means a person watched the live opt-out form.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "last_verified": {
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "last_verified_source": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "metadata_confidence": {
+          "description": "Source project confidence in the entry's metadata.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "status": {
+          "description": "verified: reviewed by the source project on last_verified. unverified: a lead to confirm.",
+          "enum": [
+            "verified",
+            "unverified"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "last_verified",
+        "last_verified_source",
+        "knowledge_block_status",
+        "dates",
+        "catalog_last_reviewed",
+        "evidence_grade",
+        "metadata_confidence"
+      ],
+      "type": "object"
+    },
+    "name": {
+      "type": "string"
+    },
+    "opt_out_routes": {
+      "description": "Ways to send the request, best first. A null url means no entry link is known.",
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "email": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "listing_free": {
+            "description": "true when the route needs no link to a specific listing. null means unknown.",
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "method": {
+            "enum": [
+              "web_form",
+              "email",
+              "phone",
+              "mail",
+              "parent_company_portal"
+            ],
+            "type": "string"
+          },
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "source": {
+            "description": "Where the route came from: source app code or metadata, or hand-curated.",
+            "type": "string"
+          },
+          "url": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "via_broker_id": {
+            "description": "Set when the request goes through another broker in this pack.",
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "method",
+          "url",
+          "email",
+          "via_broker_id",
+          "listing_free",
+          "source",
+          "note"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "opt_out_url_check": {
+      "additionalProperties": false,
+      "description": "The newest observation of one opt-out address (url). blocked means a bot check stood in front of the form.",
+      "properties": {
+        "checked": {
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "result": {
+          "enum": [
+            "loaded",
+            "blocked",
+            "error",
+            "not_checked"
+          ],
+          "type": "string"
+        },
+        "url": {
+          "description": "The address that was checked.",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "url",
+        "checked",
+        "result",
+        "note"
+      ],
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "parent_company": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "parent_contact_domains": {
+      "description": "Parent-company domains that are also safe for this broker's requests.",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "playbook": {
+      "additionalProperties": false,
+      "properties": {
+        "guided_workflow_types": {
+          "description": "Kinds of guided request the source app offers for this broker. Background only.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "omitted_step_count": {
+          "description": "How many steps were left out because they look a person up. Above zero, the steps may start part-way through.",
+          "type": "number"
+        },
+        "quirks": {
+          "description": "Known oddities of this broker.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "steps": {
+          "description": "Opt-out steps in order. Steps that look a person up are left out.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "steps_source": {
+          "description": "source_app_playbook: from the source app. curated: written by hand from the sources in provenance.",
+          "enum": [
+            "source_app_playbook",
+            "curated",
+            null
+          ],
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "suppression_lane": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "steps",
+        "steps_source",
+        "omitted_step_count",
+        "suppression_lane",
+        "guided_workflow_types",
+        "quirks"
+      ],
+      "type": "object"
+    },
+    "provenance": {
+      "description": "Where each hand-curated field came from.",
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "field": {
+            "enum": [
+              "opt_out_url",
+              "requirements",
+              "steps",
+              "genuine_confirmation",
+              "false_success_traps"
+            ],
+            "type": "string"
+          },
+          "ref": {
+            "type": "string"
+          },
+          "source": {
+            "enum": [
+              "module_code",
+              "repo_doc",
+              "broker_page",
+              "broker_help_article"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "field",
+          "source",
+          "ref"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "requirements": {
+      "additionalProperties": false,
+      "properties": {
+        "account": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "browser_challenge_expected": {
+          "description": "true when a bot check usually stands in front of the form.",
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "captcha_expected": {
+          "description": "Source app flag: true when a CAPTCHA is a normal part of this form. false does not rule one out; see captcha_likelihood.",
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "captcha_likelihood": {
+          "description": "How often the source app met a CAPTCHA on this broker.",
+          "enum": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            null
+          ],
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "date_of_birth": {
+          "description": "true when the form asks for a date of birth.",
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "email_confirmation": {
+          "description": "true when the broker emails a link that must be clicked before the request counts.",
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "government_id": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "identity_fields": {
+          "description": "Identity details the broker asks for. null means not recorded, so read the live form.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "listing_url": {
+          "description": "true when the form asks for a link to the listing. false when it does not.",
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "manual_fallback_required": {
+          "description": "true when a person must be ready to finish the request by hand.",
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "phone": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "required_actions": {
+          "description": "Short notes on what the user will be asked to do.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "session_bound_confirmation": {
+          "description": "true when the emailed link must be opened in the same browser session as the form.",
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "email_confirmation",
+        "date_of_birth",
+        "phone",
+        "government_id",
+        "account",
+        "listing_url",
+        "captcha_likelihood",
+        "captcha_expected",
+        "browser_challenge_expected",
+        "manual_fallback_required",
+        "session_bound_confirmation",
+        "identity_fields",
+        "required_actions"
+      ],
+      "type": "object"
+    },
+    "site_domains": {
+      "description": "Domains this broker runs. Send personal data only to these.",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "specialty_report": {
+      "additionalProperties": false,
+      "properties": {
+        "dispute_guidance": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "primary_action": {
+          "type": "string"
+        },
+        "request_channels": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "request_instructions": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "subtype": {
+          "type": "string"
+        },
+        "supports_deletion": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "supports_dispute": {
+          "type": "boolean"
+        },
+        "supports_freeze": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "subtype",
+        "primary_action",
+        "request_channels",
+        "supports_deletion",
+        "supports_dispute",
+        "supports_freeze",
+        "request_instructions",
+        "dispute_guidance"
+      ],
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "status": {
+      "additionalProperties": false,
+      "properties": {
+        "listing_discovery_retired": {
+          "description": "true when the source app no longer looks for listings on this site.",
+          "type": "boolean"
+        },
+        "opt_out_support": {
+          "description": "How much of the opt-out the source app could do alone. \"assisted\" means a person had to help.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "removal_reliability": {
+          "description": "How dependably past requests led to a removal.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "state": {
+          "description": "active: requests can be made. deprecated or unsupported: do not send a request; see reason.",
+          "enum": [
+            "active",
+            "deprecated",
+            "unsupported"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "state",
+        "reason",
+        "opt_out_support",
+        "removal_reliability",
+        "listing_discovery_retired"
+      ],
+      "type": "object"
+    },
+    "timing": {
+      "additionalProperties": false,
+      "properties": {
+        "est_processing_days": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "expected_removal_days": {
+          "description": "How long the source app expects a removal to take. A broker step may state a longer limit.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "expected_turnaround": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "first_check_days": {
+          "description": "Days after the request before the first check counts.",
+          "type": "number"
+        },
+        "later_check_days": {
+          "description": "Days after the request for the next checks.",
+          "items": {
+            "type": "number"
+          },
+          "type": "array"
+        },
+        "ongoing_recheck_days": {
+          "description": "Days between checks once a removal is verified.",
+          "type": "number"
+        },
+        "reappearance_risk": {
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            null
+          ],
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "est_processing_days",
+        "expected_removal_days",
+        "expected_turnaround",
+        "first_check_days",
+        "later_check_days",
+        "ongoing_recheck_days",
+        "reappearance_risk"
+      ],
+      "type": "object"
+    },
+    "verification": {
+      "additionalProperties": false,
+      "properties": {
+        "automated_recheck_unavailable": {
+          "description": "true when automated checks are blocked and the user must look.",
+          "type": "boolean"
+        },
+        "support": {
+          "description": "Whether the source app can check this broker for a removal.",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "support",
+        "automated_recheck_unavailable"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "site_domains",
+    "parent_contact_domains",
+    "contact_phones",
+    "category",
+    "parent_company",
+    "status",
+    "opt_out_routes",
+    "deletion_lane",
+    "requirements",
+    "coverage",
+    "timing",
+    "playbook",
+    "specialty_report",
+    "genuine_confirmation",
+    "false_success_traps",
+    "opt_out_url_check",
+    "provenance",
+    "verification",
+    "knowledge_verification"
+  ],
+  "title": "Agent pack broker entry",
+  "type": "object"
+}

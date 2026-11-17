@@ -1,0 +1,152 @@
+{
+  "category": "face_search",
+  "contact_phones": [],
+  "coverage": {
+    "backend_cluster_note": null,
+    "coverage_last_verified": null,
+    "covers": [],
+    "parent_broker_id": null,
+    "parent_network": null
+  },
+  "deletion_lane": null,
+  "false_success_traps": [
+    "On the document route, \"hidden\" is not \"deleted\". The photos are deleted only after the broker approves the document.",
+    "This project's automation only opens the removal page and saves a picture of it. It sends nothing. That step is not a removal request.",
+    "This removes photos from this search site only. The pages where the photos were first posted are not changed."
+  ],
+  "genuine_confirmation": "The broker says most selfie requests are approved at once and the photos are deleted right away. With the document route you get a tracking link, the photos are hidden at once, and approval follows in 1 to 5 business days.",
+  "id": "facecheckid",
+  "knowledge_verification": {
+    "catalog_last_reviewed": "2026-05-31",
+    "dates": {
+      "blind_opt_out": null,
+      "coverage": null,
+      "deletion_lane": null,
+      "knowledge": null,
+      "opt_out_url": null,
+      "playbook": null,
+      "primary_source": null
+    },
+    "evidence_grade": "C",
+    "knowledge_block_status": null,
+    "last_verified": null,
+    "last_verified_source": null,
+    "metadata_confidence": "research_only",
+    "status": "unverified"
+  },
+  "name": "FaceCheckId",
+  "opt_out_routes": [
+    {
+      "email": null,
+      "listing_free": null,
+      "method": "web_form",
+      "note": null,
+      "source": "module_code",
+      "url": "https://facecheck.id/Face-Search/RemoveMyPhotos",
+      "via_broker_id": null
+    }
+  ],
+  "opt_out_url_check": {
+    "checked": "2026-11-16",
+    "note": "The address redirects to the site's \"Remove My Photos\" page, which loads and explains the removal steps.",
+    "result": "loaded",
+    "url": "https://facecheck.id/Face-Search/RemoveMyPhotos"
+  },
+  "parent_company": null,
+  "parent_contact_domains": [],
+  "playbook": {
+    "guided_workflow_types": [],
+    "omitted_step_count": 0,
+    "quirks": [],
+    "steps": [
+      "Open the \"Remove My Photos\" page and read the broker's instructions there.",
+      "Select the photos of you that you want deleted, as the page explains.",
+      "Prove the photos are yours with a live selfie taken on the page. Only the person in the photos can do this part.",
+      "If you cannot take a selfie, the page lets you upload an identity document with the other details hidden. That route is reviewed by a person and you get a tracking link.",
+      "Keep the tracking link or the on-screen result."
+    ],
+    "steps_source": "curated",
+    "suppression_lane": null
+  },
+  "provenance": [
+    {
+      "field": "false_success_traps",
+      "ref": "https://facecheck.id/en/RemoveMyPhotos",
+      "source": "broker_page"
+    },
+    {
+      "field": "false_success_traps",
+      "ref": "src/brokers/facecheckid.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "genuine_confirmation",
+      "ref": "https://facecheck.id/en/RemoveMyPhotos",
+      "source": "broker_page"
+    },
+    {
+      "field": "opt_out_url",
+      "ref": "src/brokers/facecheckid.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "requirements",
+      "ref": "https://facecheck.id/en/RemoveMyPhotos",
+      "source": "broker_page"
+    },
+    {
+      "field": "steps",
+      "ref": "https://facecheck.id/en/RemoveMyPhotos",
+      "source": "broker_page"
+    },
+    {
+      "field": "steps",
+      "ref": "src/brokers/facecheckid.ts",
+      "source": "module_code"
+    }
+  ],
+  "requirements": {
+    "account": null,
+    "browser_challenge_expected": false,
+    "captcha_expected": false,
+    "captcha_likelihood": "high",
+    "date_of_birth": false,
+    "email_confirmation": false,
+    "government_id": false,
+    "identity_fields": null,
+    "listing_url": false,
+    "manual_fallback_required": true,
+    "phone": null,
+    "required_actions": [
+      "manual review likely"
+    ],
+    "session_bound_confirmation": false
+  },
+  "site_domains": [
+    "facecheck.id"
+  ],
+  "specialty_report": null,
+  "status": {
+    "listing_discovery_retired": false,
+    "opt_out_support": "unknown",
+    "reason": null,
+    "removal_reliability": "low",
+    "state": "active"
+  },
+  "timing": {
+    "est_processing_days": null,
+    "expected_removal_days": "1-14 days",
+    "expected_turnaround": null,
+    "first_check_days": 14,
+    "later_check_days": [
+      30,
+      90
+    ],
+    "ongoing_recheck_days": 90,
+    "reappearance_risk": null
+  },
+  "verification": {
+    "automated_recheck_unavailable": false,
+    "support": "unsupported"
+  }
+}

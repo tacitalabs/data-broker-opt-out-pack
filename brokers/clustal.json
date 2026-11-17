@@ -1,0 +1,170 @@
+{
+  "category": "directory",
+  "contact_phones": [],
+  "coverage": {
+    "backend_cluster_note": null,
+    "coverage_last_verified": null,
+    "covers": [],
+    "parent_broker_id": null,
+    "parent_network": null
+  },
+  "deletion_lane": null,
+  "false_success_traps": [
+    "A \"Just a moment...\" browser check page is not a confirmation.",
+    "If the page shows the form again with no message, the request was not accepted.",
+    "This project's check accepts loose words such as \"sent\", \"success\", or \"confirmation\" anywhere on the page. Read the actual message instead of trusting one word.",
+    "When checking later, the site may list many other people with the same name. Confirm that your own listing link is gone, and that the page is a real results page and not a browser check or error page."
+  ],
+  "genuine_confirmation": "After the email step, the page says to check or confirm your email, or that the request was received. The request only counts once you click the link in that email.",
+  "id": "clustal",
+  "knowledge_verification": {
+    "catalog_last_reviewed": "2026-05-31",
+    "dates": {
+      "blind_opt_out": null,
+      "coverage": null,
+      "deletion_lane": null,
+      "knowledge": null,
+      "opt_out_url": null,
+      "playbook": null,
+      "primary_source": null
+    },
+    "evidence_grade": "A",
+    "knowledge_block_status": null,
+    "last_verified": null,
+    "last_verified_source": null,
+    "metadata_confidence": "cross_checked",
+    "status": "unverified"
+  },
+  "name": "Clustal",
+  "opt_out_routes": [
+    {
+      "email": null,
+      "listing_free": null,
+      "method": "web_form",
+      "note": null,
+      "source": "module_metadata",
+      "url": null,
+      "via_broker_id": null
+    },
+    {
+      "email": null,
+      "listing_free": null,
+      "method": "web_form",
+      "note": null,
+      "source": "curated",
+      "url": "https://www.clustal.org/privacy-control/",
+      "via_broker_id": null
+    }
+  ],
+  "opt_out_url_check": {
+    "checked": "2026-11-16",
+    "note": "A plain request got a \"Just a moment...\" browser check page instead of the form.",
+    "result": "blocked",
+    "url": "https://www.clustal.org/privacy-control/"
+  },
+  "parent_company": null,
+  "parent_contact_domains": [],
+  "playbook": {
+    "guided_workflow_types": [],
+    "omitted_step_count": 0,
+    "quirks": [],
+    "steps": [
+      "Have the link to your listing and an email address ready.",
+      "Open the privacy control page.",
+      "Complete the \"are you human\" check if one appears.",
+      "Paste the link to your listing and send it.",
+      "On the next page, enter your email address and send it. Another \"are you human\" check may appear first.",
+      "The page tells you to check your email.",
+      "Open the email and click the link to confirm."
+    ],
+    "steps_source": "curated",
+    "suppression_lane": null
+  },
+  "provenance": [
+    {
+      "field": "false_success_traps",
+      "ref": "docs/broker-status.md",
+      "source": "repo_doc"
+    },
+    {
+      "field": "false_success_traps",
+      "ref": "src/brokers/directoryPeopleSearch.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "genuine_confirmation",
+      "ref": "src/brokers/directoryPeopleSearch.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "opt_out_url",
+      "ref": "src/brokers/clustal.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "requirements",
+      "ref": "electron/services/brokerCatalog.ts",
+      "source": "repo_doc"
+    },
+    {
+      "field": "requirements",
+      "ref": "src/brokers/directoryPeopleSearch.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "steps",
+      "ref": "src/brokers/clustal.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "steps",
+      "ref": "src/brokers/directoryPeopleSearch.ts",
+      "source": "module_code"
+    }
+  ],
+  "requirements": {
+    "account": false,
+    "browser_challenge_expected": true,
+    "captcha_expected": true,
+    "captcha_likelihood": "medium",
+    "date_of_birth": false,
+    "email_confirmation": true,
+    "government_id": false,
+    "identity_fields": null,
+    "listing_url": true,
+    "manual_fallback_required": true,
+    "phone": false,
+    "required_actions": [
+      "email confirmation likely",
+      "CAPTCHA possible"
+    ],
+    "session_bound_confirmation": false
+  },
+  "site_domains": [
+    "clustal.org"
+  ],
+  "specialty_report": null,
+  "status": {
+    "listing_discovery_retired": false,
+    "opt_out_support": "assisted",
+    "reason": null,
+    "removal_reliability": "medium",
+    "state": "active"
+  },
+  "timing": {
+    "est_processing_days": null,
+    "expected_removal_days": "1-14 days",
+    "expected_turnaround": null,
+    "first_check_days": 14,
+    "later_check_days": [
+      30,
+      90
+    ],
+    "ongoing_recheck_days": 30,
+    "reappearance_risk": null
+  },
+  "verification": {
+    "automated_recheck_unavailable": false,
+    "support": "supported"
+  }
+}

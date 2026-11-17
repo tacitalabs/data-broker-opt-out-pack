@@ -1,0 +1,26 @@
+{
+  "broker_count": 67,
+  "brokers_by_status": {
+    "active": 43,
+    "deprecated": 5,
+    "unsupported": 19
+  },
+  "catalog_loaded": true,
+  "cluster_count": 3,
+  "dropped_text_count": 6,
+  "generated_at": "2026-11-17T04:09:20.240Z",
+  "knowledge_block_verified": 2,
+  "knowledge_verification": {
+    "unverified": 58,
+    "verified": 9
+  },
+  "license": "CC-BY-NC-SA-4.0",
+  "pack_status": "public release",
+  "source_app": "Infobreaker",
+  "source_app_version": "1.0.0-beta.74",
+  "with_curated_data": 43,
+  "with_false_success_traps": 43,
+  "with_genuine_confirmation": 27,
+  "with_opt_out_url": 48,
+  "with_playbook_steps": 41
+}

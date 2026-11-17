@@ -1,0 +1,198 @@
+{
+  "category": "directory",
+  "contact_phones": [],
+  "coverage": {
+    "backend_cluster_note": null,
+    "coverage_last_verified": null,
+    "covers": [
+      "Alabama Arrests",
+      "Alaska Arrests",
+      "Arizona Arrests",
+      "Arkansas Arrests",
+      "California Arrests",
+      "Colorado Arrests",
+      "Connecticut Arrests",
+      "Delaware Arrests",
+      "Florida Arrests",
+      "Georgia Arrests",
+      "Hawaii Arrests",
+      "Idaho Arrests",
+      "Illinois Arrests",
+      "Indiana Arrests",
+      "Iowa Arrests",
+      "Kansas Arrests",
+      "Kentucky Arrests",
+      "Louisiana Arrests",
+      "Maine Arrests",
+      "Maryland Arrests",
+      "Massachusetts Arrests",
+      "Michigan Arrests",
+      "Minnesota Arrests",
+      "Mississippi Arrests",
+      "Missouri Arrests",
+      "Montana Arrests",
+      "Nebraska Arrests",
+      "Nevada Arrests",
+      "New Hampshire Arrests",
+      "New Jersey Arrests",
+      "New Mexico Arrests",
+      "New York Arrests",
+      "North Carolina Arrests",
+      "North Dakota Arrests",
+      "Ohio Arrests",
+      "Oklahoma Arrests",
+      "Oregon Arrests",
+      "Pennsylvania Arrests",
+      "Rhode Island Arrests",
+      "South Carolina Arrests",
+      "South Dakota Arrests",
+      "Tennessee Arrests",
+      "Texas Arrests",
+      "Utah Arrests",
+      "Vermont Arrests",
+      "Virginia Arrests",
+      "Washington Arrests",
+      "Washington DC Arrests",
+      "West Virginia Arrests",
+      "Wisconsin Arrests",
+      "Wyoming Arrests"
+    ],
+    "parent_broker_id": null,
+    "parent_network": "InfoTracer / State Arrests"
+  },
+  "deletion_lane": null,
+  "false_success_traps": [
+    "Sending the request is not proof of removal. Check the state site again later.",
+    "The state arrests sites do not handle removal themselves. A request has to go to InfoTracer.",
+    "When you check later, a loading page or a page that asks you to register is not a results page. It does not show that the listing is gone."
+  ],
+  "genuine_confirmation": null,
+  "id": "state-arrests",
+  "knowledge_verification": {
+    "catalog_last_reviewed": "2026-05-31",
+    "dates": {
+      "blind_opt_out": null,
+      "coverage": null,
+      "deletion_lane": null,
+      "knowledge": null,
+      "opt_out_url": "2026-07-09",
+      "playbook": "2026-07-09",
+      "primary_source": "2026-07-09"
+    },
+    "evidence_grade": "C",
+    "knowledge_block_status": null,
+    "last_verified": "2026-07-09",
+    "last_verified_source": "playbook",
+    "metadata_confidence": "research_only",
+    "status": "verified"
+  },
+  "name": "State Arrests / InfoTracer network",
+  "opt_out_routes": [
+    {
+      "email": null,
+      "listing_free": null,
+      "method": "parent_company_portal",
+      "note": null,
+      "source": "module_code",
+      "url": "https://infotracer.com/optout/",
+      "via_broker_id": "infotracer"
+    }
+  ],
+  "opt_out_url_check": {
+    "checked": "2026-11-16",
+    "note": "The address answered (HTTP 200) but showed a message that the page was requested too many times, not the opt-out form. Try again in a normal browser.",
+    "result": "blocked",
+    "url": "https://infotracer.com/optout/"
+  },
+  "parent_company": null,
+  "parent_contact_domains": [],
+  "playbook": {
+    "guided_workflow_types": [
+      "assisted_privacy_form",
+      "third_party_pii_deletion"
+    ],
+    "omitted_step_count": 0,
+    "quirks": [
+      "A sent form or a loading page is not a public-listing match. Wait until a verified result page is seen.",
+      "Some state domains use abbreviations, such as flarrests.org, ctarrests.org, and nmarrests.org.",
+      "State-site forms feed an infotracer.net loading and affiliate funnel. They do not show a local result page you can trust."
+    ],
+    "steps": [
+      "Note which state arrests site shows the listing.",
+      "Open the InfoTracer opt-out page. The state arrests sites send their searches to InfoTracer, and removal is handled there.",
+      "Follow the InfoTracer opt-out steps shown on that page. This project has no record of the steps for this network.",
+      "Check the state site again later."
+    ],
+    "steps_source": "curated",
+    "suppression_lane": "Use the InfoTracer opt-out to request record removal. Then recheck the source state site later. Treat the step as assisted until it is verified."
+  },
+  "provenance": [
+    {
+      "field": "false_success_traps",
+      "ref": "electron/services/brokerCatalog.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "false_success_traps",
+      "ref": "src/brokers/statearrests.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "opt_out_url",
+      "ref": "src/brokers/statearrests.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "steps",
+      "ref": "src/brokers/statearrests.ts",
+      "source": "module_code"
+    }
+  ],
+  "requirements": {
+    "account": null,
+    "browser_challenge_expected": true,
+    "captcha_expected": false,
+    "captcha_likelihood": "low",
+    "date_of_birth": false,
+    "email_confirmation": false,
+    "government_id": null,
+    "identity_fields": null,
+    "listing_url": null,
+    "manual_fallback_required": true,
+    "phone": null,
+    "required_actions": [
+      "affiliate/paywall funnel",
+      "assisted privacy request",
+      "InfoTracer opt-out"
+    ],
+    "session_bound_confirmation": false
+  },
+  "site_domains": [
+    "arizonaarrests.org",
+    "infotracer.com"
+  ],
+  "specialty_report": null,
+  "status": {
+    "listing_discovery_retired": false,
+    "opt_out_support": "assisted",
+    "reason": null,
+    "removal_reliability": "low",
+    "state": "active"
+  },
+  "timing": {
+    "est_processing_days": null,
+    "expected_removal_days": "1-14 days",
+    "expected_turnaround": null,
+    "first_check_days": 14,
+    "later_check_days": [
+      30,
+      90
+    ],
+    "ongoing_recheck_days": 90,
+    "reappearance_risk": null
+  },
+  "verification": {
+    "automated_recheck_unavailable": false,
+    "support": "assisted"
+  }
+}

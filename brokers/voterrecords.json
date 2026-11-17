@@ -1,0 +1,147 @@
+{
+  "category": "voter_records",
+  "contact_phones": [],
+  "coverage": {
+    "backend_cluster_note": null,
+    "coverage_last_verified": null,
+    "covers": [],
+    "parent_broker_id": null,
+    "parent_network": null
+  },
+  "deletion_lane": null,
+  "false_success_traps": [
+    "An emailed link is expected to finish the request. Until that link is followed, the request is not complete.",
+    "This project marks VoterRecords opt-out support as unknown. The steps here are unproven in a live run.",
+    "Treat a submit with no visible receipt as unconfirmed. Look for a clear message that the request was received."
+  ],
+  "genuine_confirmation": null,
+  "id": "voterrecords",
+  "knowledge_verification": {
+    "catalog_last_reviewed": "2026-05-31",
+    "dates": {
+      "blind_opt_out": null,
+      "coverage": null,
+      "deletion_lane": null,
+      "knowledge": null,
+      "opt_out_url": null,
+      "playbook": null,
+      "primary_source": null
+    },
+    "evidence_grade": "C",
+    "knowledge_block_status": null,
+    "last_verified": null,
+    "last_verified_source": null,
+    "metadata_confidence": "research_only",
+    "status": "unverified"
+  },
+  "name": "VoterRecords",
+  "opt_out_routes": [
+    {
+      "email": null,
+      "listing_free": null,
+      "method": "web_form",
+      "note": null,
+      "source": "module_code",
+      "url": "https://voterrecords.com/opt-out",
+      "via_broker_id": null
+    }
+  ],
+  "opt_out_url_check": {
+    "checked": "2026-11-16",
+    "note": "A plain request got a \"Just a moment...\" browser check (HTTP 403). A real browser is needed. This project has not confirmed that this address shows a working form.",
+    "result": "blocked",
+    "url": "https://voterrecords.com/opt-out"
+  },
+  "parent_company": null,
+  "parent_contact_domains": [],
+  "playbook": {
+    "guided_workflow_types": [],
+    "omitted_step_count": 0,
+    "quirks": [],
+    "steps": [
+      "Have the link to your listing ready.",
+      "Open the listing in a normal browser. Solve the human check if one appears.",
+      "Look for an \"Opt Out\" or \"Remove\" link on the listing and follow it. If there is none, open the VoterRecords opt-out page.",
+      "Enter an email address you can read.",
+      "Solve any human check, then send the form.",
+      "Open the email from VoterRecords and follow the link to finish.",
+      "Check the listing again later. Voter records come from state files, so state rules may decide whether it can be removed."
+    ],
+    "steps_source": "curated",
+    "suppression_lane": null
+  },
+  "provenance": [
+    {
+      "field": "false_success_traps",
+      "ref": "electron/services/brokerCatalog.ts",
+      "source": "repo_doc"
+    },
+    {
+      "field": "false_success_traps",
+      "ref": "src/brokers/voterrecords.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "opt_out_url",
+      "ref": "src/brokers/voterrecords.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "requirements",
+      "ref": "src/brokers/voterrecords.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "steps",
+      "ref": "electron/services/brokerCatalog.ts",
+      "source": "repo_doc"
+    },
+    {
+      "field": "steps",
+      "ref": "src/brokers/voterrecords.ts",
+      "source": "module_code"
+    }
+  ],
+  "requirements": {
+    "account": null,
+    "browser_challenge_expected": true,
+    "captcha_expected": false,
+    "captcha_likelihood": "low",
+    "date_of_birth": false,
+    "email_confirmation": true,
+    "government_id": null,
+    "identity_fields": null,
+    "listing_url": null,
+    "manual_fallback_required": false,
+    "phone": null,
+    "required_actions": [],
+    "session_bound_confirmation": false
+  },
+  "site_domains": [
+    "voterrecords.com"
+  ],
+  "specialty_report": null,
+  "status": {
+    "listing_discovery_retired": false,
+    "opt_out_support": "unknown",
+    "reason": null,
+    "removal_reliability": "unknown",
+    "state": "active"
+  },
+  "timing": {
+    "est_processing_days": null,
+    "expected_removal_days": "1-14 days",
+    "expected_turnaround": null,
+    "first_check_days": 14,
+    "later_check_days": [
+      30,
+      90
+    ],
+    "ongoing_recheck_days": 90,
+    "reappearance_risk": null
+  },
+  "verification": {
+    "automated_recheck_unavailable": false,
+    "support": "unsupported"
+  }
+}

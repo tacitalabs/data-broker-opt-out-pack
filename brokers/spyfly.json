@@ -1,0 +1,160 @@
+{
+  "category": "people_search",
+  "contact_phones": [],
+  "coverage": {
+    "backend_cluster_note": null,
+    "coverage_last_verified": null,
+    "covers": [],
+    "parent_broker_id": null,
+    "parent_network": null
+  },
+  "deletion_lane": null,
+  "false_success_traps": [
+    "A security verification page is not a confirmation. It can appear before the form and again after submit.",
+    "Do not close the page while you wait for the code. The code must go into that same page.",
+    "The page that asks for the one-time email code is a middle step. Nothing is filed until the code is entered.",
+    "The page that says to check your email for a link is also not the end. The final link stops working after 60 minutes."
+  ],
+  "genuine_confirmation": "After the one-time code is accepted, the page says to check your email and click the link to finalize your request. The request is complete once that link is clicked, or when the page says the request was submitted or received.",
+  "id": "spyfly",
+  "knowledge_verification": {
+    "catalog_last_reviewed": "2026-05-31",
+    "dates": {
+      "blind_opt_out": null,
+      "coverage": null,
+      "deletion_lane": null,
+      "knowledge": null,
+      "opt_out_url": null,
+      "playbook": null,
+      "primary_source": null
+    },
+    "evidence_grade": "B",
+    "knowledge_block_status": null,
+    "last_verified": null,
+    "last_verified_source": null,
+    "metadata_confidence": "cross_checked",
+    "status": "unverified"
+  },
+  "name": "SpyFly",
+  "opt_out_routes": [
+    {
+      "email": null,
+      "listing_free": null,
+      "method": "web_form",
+      "note": null,
+      "source": "module_code",
+      "url": "https://www.spyfly.com/help-center/privacy-requests",
+      "via_broker_id": null
+    }
+  ],
+  "opt_out_url_check": {
+    "checked": "2026-11-16",
+    "note": "A plain page request got a browser challenge page (HTTP 403). A normal browser is needed to pass it.",
+    "result": "blocked",
+    "url": "https://www.spyfly.com/help-center/privacy-requests"
+  },
+  "parent_company": null,
+  "parent_contact_domains": [],
+  "playbook": {
+    "guided_workflow_types": [],
+    "omitted_step_count": 0,
+    "quirks": [],
+    "steps": [
+      "Open the SpyFly privacy requests page in its help center.",
+      "Wait for the security check to clear, or clear it yourself. Pass the robot check if one appears.",
+      "On the opt-out form, fill in the first and last name.",
+      "Choose the do-not-sell request type.",
+      "Enter the city, state, ZIP code, and age shown on the listing, and an email address.",
+      "Answer that you are not a SpyFly customer, if that is true.",
+      "Pass the robot check again if it appears, then submit.",
+      "If the page asks to verify your email address, enter the email and send the code.",
+      "Open the email and type the one-time code into the same open page. Keep that page open. The code works only for a short time.",
+      "Pick your record if the page asks you to choose one.",
+      "The page then says to check your email. Open the second email and click its link. The page says the link works for 60 minutes.",
+      "If the form will not load, email support@spyfly.com with the name and the link to your listing."
+    ],
+    "steps_source": "curated",
+    "suppression_lane": null
+  },
+  "provenance": [
+    {
+      "field": "false_success_traps",
+      "ref": "docs/broker-status.md",
+      "source": "repo_doc"
+    },
+    {
+      "field": "false_success_traps",
+      "ref": "src/brokers/spyfly.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "genuine_confirmation",
+      "ref": "src/brokers/spyfly.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "opt_out_url",
+      "ref": "src/brokers/spyfly.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "requirements",
+      "ref": "src/brokers/spyfly.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "steps",
+      "ref": "docs/broker-status.md",
+      "source": "repo_doc"
+    },
+    {
+      "field": "steps",
+      "ref": "src/brokers/spyfly.ts",
+      "source": "module_code"
+    }
+  ],
+  "requirements": {
+    "account": false,
+    "browser_challenge_expected": true,
+    "captcha_expected": false,
+    "captcha_likelihood": "low",
+    "date_of_birth": false,
+    "email_confirmation": true,
+    "government_id": false,
+    "identity_fields": null,
+    "listing_url": false,
+    "manual_fallback_required": true,
+    "phone": false,
+    "required_actions": [
+      "Cloudflare clearance possible"
+    ],
+    "session_bound_confirmation": false
+  },
+  "site_domains": [
+    "spyfly.com"
+  ],
+  "specialty_report": null,
+  "status": {
+    "listing_discovery_retired": false,
+    "opt_out_support": "assisted",
+    "reason": null,
+    "removal_reliability": "low",
+    "state": "active"
+  },
+  "timing": {
+    "est_processing_days": null,
+    "expected_removal_days": "1-14 days",
+    "expected_turnaround": null,
+    "first_check_days": 14,
+    "later_check_days": [
+      30,
+      90
+    ],
+    "ongoing_recheck_days": 60,
+    "reappearance_risk": null
+  },
+  "verification": {
+    "automated_recheck_unavailable": false,
+    "support": "supported"
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "category": "people_search",
+  "contact_phones": [],
+  "coverage": {
+    "backend_cluster_note": null,
+    "coverage_last_verified": null,
+    "covers": [],
+    "parent_broker_id": null,
+    "parent_network": null
+  },
+  "deletion_lane": null,
+  "false_success_traps": [
+    "A recheck once reported the listing as removed while it was still on the page. Look at the page itself before calling it gone.",
+    "A security check page, a captcha notice, or any \"required field\" or \"invalid\" message after you submit means the request did not go through.",
+    "General privacy wording on the page is not a confirmation. The page must say the request itself was received or submitted.",
+    "If the form is still showing after you submit and no receipt appears, nothing was sent.",
+    "The \"check your email\" page is not the end. The request stays open until the emailed link is followed."
+  ],
+  "genuine_confirmation": "After the last step the page plainly says the removal request was received or submitted, and asks you to check your email for a confirmation link. The request is not finished until that link is opened.",
+  "id": "veripages",
+  "knowledge_verification": {
+    "catalog_last_reviewed": "2026-05-31",
+    "dates": {
+      "blind_opt_out": null,
+      "coverage": null,
+      "deletion_lane": null,
+      "knowledge": null,
+      "opt_out_url": null,
+      "playbook": null,
+      "primary_source": null
+    },
+    "evidence_grade": "B",
+    "knowledge_block_status": null,
+    "last_verified": null,
+    "last_verified_source": null,
+    "metadata_confidence": "cross_checked",
+    "status": "unverified"
+  },
+  "name": "Veripages",
+  "opt_out_routes": [
+    {
+      "email": null,
+      "listing_free": null,
+      "method": "web_form",
+      "note": null,
+      "source": "module_code",
+      "url": "https://veripages.com/inner/control-privacy",
+      "via_broker_id": null
+    },
+    {
+      "email": null,
+      "listing_free": null,
+      "method": "web_form",
+      "note": null,
+      "source": "module_code",
+      "url": "https://veripages.com/inner/removal-service",
+      "via_broker_id": null
+    }
+  ],
+  "opt_out_url_check": {
+    "checked": "2026-11-16",
+    "note": "A plain request got a \"Just a moment...\" browser check (HTTP 403). A real browser is needed.",
+    "result": "blocked",
+    "url": "https://veripages.com/inner/control-privacy"
+  },
+  "parent_company": null,
+  "parent_contact_domains": [],
+  "playbook": {
+    "guided_workflow_types": [],
+    "omitted_step_count": 0,
+    "quirks": [],
+    "steps": [
+      "Have the link to your own listing page ready. It must be the page for one person. A link to a page of search results is rejected.",
+      "Open the Veripages privacy control page in a normal browser. Solve the human check if one appears.",
+      "Press \"Start Removal Process\".",
+      "Press Next until the page asks for the link to the profile.",
+      "Paste the link to your listing and press Next. If the page says the link is not valid, stop and get the right link.",
+      "Press Next or Skip until the page asks for your name and email.",
+      "On the opt-out form, fill in the name on the listing and an email address you can read.",
+      "Solve the human check, then send the form.",
+      "Wait for the page to say the request was received and to check your email.",
+      "Open the email from Veripages and follow the confirmation link.",
+      "Check the listing again later to see that it is gone."
+    ],
+    "steps_source": "curated",
+    "suppression_lane": null
+  },
+  "provenance": [
+    {
+      "field": "false_success_traps",
+      "ref": "docs/broker-status.md",
+      "source": "repo_doc"
+    },
+    {
+      "field": "false_success_traps",
+      "ref": "src/brokers/veripages.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "genuine_confirmation",
+      "ref": "docs/broker-status.md",
+      "source": "repo_doc"
+    },
+    {
+      "field": "genuine_confirmation",
+      "ref": "src/brokers/veripages.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "opt_out_url",
+      "ref": "src/brokers/veripages.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "requirements",
+      "ref": "docs/broker-status.md",
+      "source": "repo_doc"
+    },
+    {
+      "field": "requirements",
+      "ref": "src/brokers/veripages.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "steps",
+      "ref": "docs/broker-status.md",
+      "source": "repo_doc"
+    },
+    {
+      "field": "steps",
+      "ref": "src/brokers/veripages.ts",
+      "source": "module_code"
+    }
+  ],
+  "requirements": {
+    "account": false,
+    "browser_challenge_expected": true,
+    "captcha_expected": false,
+    "captcha_likelihood": "high",
+    "date_of_birth": false,
+    "email_confirmation": true,
+    "government_id": false,
+    "identity_fields": null,
+    "listing_url": true,
+    "manual_fallback_required": true,
+    "phone": false,
+    "required_actions": [
+      "email confirmation possible",
+      "manual review possible"
+    ],
+    "session_bound_confirmation": false
+  },
+  "site_domains": [
+    "veripages.com"
+  ],
+  "specialty_report": null,
+  "status": {
+    "listing_discovery_retired": false,
+    "opt_out_support": "assisted",
+    "reason": null,
+    "removal_reliability": "low",
+    "state": "active"
+  },
+  "timing": {
+    "est_processing_days": null,
+    "expected_removal_days": "1-14 days",
+    "expected_turnaround": null,
+    "first_check_days": 14,
+    "later_check_days": [
+      30,
+      90
+    ],
+    "ongoing_recheck_days": 60,
+    "reappearance_risk": null
+  },
+  "verification": {
+    "automated_recheck_unavailable": false,
+    "support": "supported"
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "category": "people_search",
+  "contact_phones": [],
+  "coverage": {
+    "backend_cluster_note": null,
+    "coverage_last_verified": null,
+    "covers": [],
+    "parent_broker_id": null,
+    "parent_network": null
+  },
+  "deletion_lane": null,
+  "false_success_traps": [
+    "The \"Opt Out Complete\" page is not final. In one run the broker later sent an email declining the request, because of the privacy law in the person's state.",
+    "The email link expires. The site says to request a new one after 24 hours, and the removal session it opens can time out after 30 minutes.",
+    "The page that says an email has been sent is not a removal request. The request is only made on the form that the email link opens."
+  ],
+  "genuine_confirmation": "After the emailed form is sent, the site shows an \"Opt Out Complete\" page and says it will also send a confirmation email. The earlier \"email has been sent\" page only means the first stage worked.",
+  "id": "searchpeoplefree",
+  "knowledge_verification": {
+    "catalog_last_reviewed": "2026-05-31",
+    "dates": {
+      "blind_opt_out": null,
+      "coverage": null,
+      "deletion_lane": null,
+      "knowledge": null,
+      "opt_out_url": null,
+      "playbook": null,
+      "primary_source": null
+    },
+    "evidence_grade": "A",
+    "knowledge_block_status": null,
+    "last_verified": null,
+    "last_verified_source": null,
+    "metadata_confidence": "cross_checked",
+    "status": "unverified"
+  },
+  "name": "SearchPeopleFree",
+  "opt_out_routes": [
+    {
+      "email": null,
+      "listing_free": null,
+      "method": "web_form",
+      "note": null,
+      "source": "module_code",
+      "url": "https://searchpeoplefree.com/opt-out",
+      "via_broker_id": null
+    }
+  ],
+  "opt_out_url_check": {
+    "checked": "2026-11-16",
+    "note": "HTTP 200 after a redirect to the www address. The page shows the record removal instructions.",
+    "result": "loaded",
+    "url": "https://searchpeoplefree.com/opt-out"
+  },
+  "parent_company": null,
+  "parent_contact_domains": [],
+  "playbook": {
+    "guided_workflow_types": [],
+    "omitted_step_count": 0,
+    "quirks": [],
+    "steps": [
+      "Open the SearchPeopleFree opt-out page.",
+      "Pass the robot check if one appears.",
+      "On the opt-out form, fill in the first name, last name, and an email address. Tick the box on the form.",
+      "Pass the robot check again if it appears, then submit.",
+      "The page says an email has been sent, or asks you to validate your email address. This is only the first stage.",
+      "Open the email and click its link. The site says the link stops working after 24 hours.",
+      "Fill in the removal form that the link opens. Use details that match the listing. A past run needed full name, address, and date of birth.",
+      "Submit and wait for the page that says the opt-out is complete.",
+      "Watch the inbox afterwards. The broker may send a confirmation email, or an email that declines the request."
+    ],
+    "steps_source": "curated",
+    "suppression_lane": null
+  },
+  "provenance": [
+    {
+      "field": "false_success_traps",
+      "ref": "docs/broker-status.md",
+      "source": "repo_doc"
+    },
+    {
+      "field": "false_success_traps",
+      "ref": "https://www.searchpeoplefree.com/opt-out",
+      "source": "broker_page"
+    },
+    {
+      "field": "false_success_traps",
+      "ref": "src/brokers/searchpeoplefree.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "genuine_confirmation",
+      "ref": "docs/broker-status.md",
+      "source": "repo_doc"
+    },
+    {
+      "field": "genuine_confirmation",
+      "ref": "https://www.searchpeoplefree.com/opt-out",
+      "source": "broker_page"
+    },
+    {
+      "field": "opt_out_url",
+      "ref": "src/brokers/searchpeoplefree.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "requirements",
+      "ref": "docs/broker-status.md",
+      "source": "repo_doc"
+    },
+    {
+      "field": "requirements",
+      "ref": "src/brokers/searchpeoplefree.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "steps",
+      "ref": "docs/broker-status.md",
+      "source": "repo_doc"
+    },
+    {
+      "field": "steps",
+      "ref": "https://www.searchpeoplefree.com/opt-out",
+      "source": "broker_page"
+    },
+    {
+      "field": "steps",
+      "ref": "src/brokers/searchpeoplefree.ts",
+      "source": "module_code"
+    }
+  ],
+  "requirements": {
+    "account": false,
+    "browser_challenge_expected": false,
+    "captcha_expected": false,
+    "captcha_likelihood": "medium",
+    "date_of_birth": false,
+    "email_confirmation": true,
+    "government_id": null,
+    "identity_fields": null,
+    "listing_url": null,
+    "manual_fallback_required": true,
+    "phone": null,
+    "required_actions": [
+      "email confirmation possible"
+    ],
+    "session_bound_confirmation": false
+  },
+  "site_domains": [
+    "searchpeoplefree.com"
+  ],
+  "specialty_report": null,
+  "status": {
+    "listing_discovery_retired": false,
+    "opt_out_support": "assisted",
+    "reason": null,
+    "removal_reliability": "medium",
+    "state": "active"
+  },
+  "timing": {
+    "est_processing_days": null,
+    "expected_removal_days": "1-14 days",
+    "expected_turnaround": null,
+    "first_check_days": 14,
+    "later_check_days": [
+      30,
+      90
+    ],
+    "ongoing_recheck_days": 30,
+    "reappearance_risk": null
+  },
+  "verification": {
+    "automated_recheck_unavailable": false,
+    "support": "supported"
+  }
+}

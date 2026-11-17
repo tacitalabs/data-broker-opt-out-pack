@@ -1,0 +1,170 @@
+{
+  "category": "directory",
+  "contact_phones": [],
+  "coverage": {
+    "backend_cluster_note": null,
+    "coverage_last_verified": null,
+    "covers": [
+      "ThePublicIndex"
+    ],
+    "parent_broker_id": null,
+    "parent_network": "InfoPay / ThePublicIndex"
+  },
+  "deletion_lane": null,
+  "false_success_traps": [
+    "A page that asks you to log in or sign up as a member is not a listing and not a confirmation.",
+    "Reading the privacy page is not a request. On 2026-11-16 the page pointed to third-party sites and showed no form of its own.",
+    "State subdomains are public-record explainer and index pages. They are not proof that a person listing exists.",
+    "This project's automation never reports a ThePublicIndex request as sent. It always hands the work to a person."
+  ],
+  "genuine_confirmation": null,
+  "id": "thepublicindex",
+  "knowledge_verification": {
+    "catalog_last_reviewed": "2026-05-31",
+    "dates": {
+      "blind_opt_out": null,
+      "coverage": null,
+      "deletion_lane": null,
+      "knowledge": null,
+      "opt_out_url": "2026-07-09",
+      "playbook": "2026-07-09",
+      "primary_source": "2026-07-09"
+    },
+    "evidence_grade": "C",
+    "knowledge_block_status": null,
+    "last_verified": "2026-07-09",
+    "last_verified_source": "playbook",
+    "metadata_confidence": "research_only",
+    "status": "verified"
+  },
+  "name": "ThePublicIndex",
+  "opt_out_routes": [
+    {
+      "email": null,
+      "listing_free": null,
+      "method": "web_form",
+      "note": null,
+      "source": "module_code",
+      "url": "https://thepublicindex.org/optout",
+      "via_broker_id": null
+    },
+    {
+      "email": "privacy@thepublicindex.org",
+      "listing_free": null,
+      "method": "email",
+      "note": "Use the privacy address for covered-person requests. Also use it when the removal form is blocked or incomplete.",
+      "source": "module_metadata",
+      "url": null,
+      "via_broker_id": null
+    }
+  ],
+  "opt_out_url_check": {
+    "checked": "2026-11-16",
+    "note": "The page loaded as \"Your Privacy Choices\". Its text now says privacy requests are handled by the third-party site a search was sent to. No removal form was seen in the page as fetched. Project notes from 2026-07-09 describe a removal form here, so the page may have changed.",
+    "result": "loaded",
+    "url": "https://thepublicindex.org/optout"
+  },
+  "parent_company": null,
+  "parent_contact_domains": [],
+  "playbook": {
+    "guided_workflow_types": [
+      "assisted_privacy_form",
+      "rights_request_email"
+    ],
+    "omitted_step_count": 0,
+    "quirks": [
+      "A sent form is not a removal claim. Wait until a check confirms the listing is gone.",
+      "State subdomains are public-record explainer and index pages. They are not proof that a person listing exists.",
+      "The form posts to members.thepublicindex.org/removeMyData/. It asks for first name, last name, and state. City is optional."
+    ],
+    "steps": [
+      "Open the ThePublicIndex \"Your Privacy Choices\" page.",
+      "Read what the page asks for today. On 2026-11-16 it said requests are handled by the third-party site that a search was sent to.",
+      "If that applies to you, make the request on that third-party site's own privacy page.",
+      "If the page shows a removal form instead, only send it when the record shown is clearly yours.",
+      "Covered-person requests can go by email to privacy@thepublicindex.org.",
+      "Do not count the request as done until a later check shows the listing is gone."
+    ],
+    "steps_source": "curated",
+    "suppression_lane": "Use the ThePublicIndex privacy choices form at /optout. Treat as assisted until a later recheck verifies the listing is gone."
+  },
+  "provenance": [
+    {
+      "field": "false_success_traps",
+      "ref": "https://thepublicindex.org/optout",
+      "source": "broker_page"
+    },
+    {
+      "field": "false_success_traps",
+      "ref": "src/brokers/thepublicindex.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "opt_out_url",
+      "ref": "src/brokers/thepublicindex.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "steps",
+      "ref": "electron/services/brokerCatalog.ts",
+      "source": "repo_doc"
+    },
+    {
+      "field": "steps",
+      "ref": "https://thepublicindex.org/optout",
+      "source": "broker_page"
+    },
+    {
+      "field": "steps",
+      "ref": "src/brokers/thepublicindex.ts",
+      "source": "module_code"
+    }
+  ],
+  "requirements": {
+    "account": null,
+    "browser_challenge_expected": false,
+    "captcha_expected": false,
+    "captcha_likelihood": "low",
+    "date_of_birth": false,
+    "email_confirmation": false,
+    "government_id": null,
+    "identity_fields": null,
+    "listing_url": null,
+    "manual_fallback_required": true,
+    "phone": null,
+    "required_actions": [
+      "public-record index",
+      "assisted privacy form",
+      "email fallback available",
+      "member/paywall surface possible"
+    ],
+    "session_bound_confirmation": false
+  },
+  "site_domains": [
+    "thepublicindex.org"
+  ],
+  "specialty_report": null,
+  "status": {
+    "listing_discovery_retired": true,
+    "opt_out_support": "assisted",
+    "reason": null,
+    "removal_reliability": "low",
+    "state": "active"
+  },
+  "timing": {
+    "est_processing_days": null,
+    "expected_removal_days": "1-14 days",
+    "expected_turnaround": null,
+    "first_check_days": 14,
+    "later_check_days": [
+      30,
+      90
+    ],
+    "ongoing_recheck_days": 90,
+    "reappearance_risk": null
+  },
+  "verification": {
+    "automated_recheck_unavailable": false,
+    "support": "assisted"
+  }
+}

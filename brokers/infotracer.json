@@ -1,0 +1,102 @@
+{
+  "category": "people_search",
+  "contact_phones": [],
+  "coverage": {
+    "backend_cluster_note": "InfoTracer and SearchQuarry use a similar form stack and browser challenge. Drift on one should trigger a review of both.",
+    "coverage_last_verified": null,
+    "covers": [],
+    "parent_broker_id": null,
+    "parent_network": null
+  },
+  "deletion_lane": null,
+  "false_success_traps": null,
+  "genuine_confirmation": null,
+  "id": "infotracer",
+  "knowledge_verification": {
+    "catalog_last_reviewed": "2026-05-31",
+    "dates": {
+      "blind_opt_out": null,
+      "coverage": null,
+      "deletion_lane": null,
+      "knowledge": null,
+      "opt_out_url": null,
+      "playbook": null,
+      "primary_source": null
+    },
+    "evidence_grade": "D",
+    "knowledge_block_status": null,
+    "last_verified": null,
+    "last_verified_source": null,
+    "metadata_confidence": "primary_verified",
+    "status": "unverified"
+  },
+  "name": "InfoTracer",
+  "opt_out_routes": [
+    {
+      "email": null,
+      "listing_free": null,
+      "method": "web_form",
+      "note": null,
+      "source": "module_code",
+      "url": "https://infotracer.com/optout/",
+      "via_broker_id": null
+    }
+  ],
+  "opt_out_url_check": null,
+  "parent_company": "InfoPay",
+  "parent_contact_domains": [],
+  "playbook": {
+    "guided_workflow_types": [],
+    "omitted_step_count": 0,
+    "quirks": [],
+    "steps": null,
+    "steps_source": null,
+    "suppression_lane": null
+  },
+  "provenance": [],
+  "requirements": {
+    "account": null,
+    "browser_challenge_expected": false,
+    "captcha_expected": false,
+    "captcha_likelihood": "medium",
+    "date_of_birth": false,
+    "email_confirmation": false,
+    "government_id": null,
+    "identity_fields": null,
+    "listing_url": null,
+    "manual_fallback_required": false,
+    "phone": null,
+    "required_actions": [
+      "deprecated",
+      "broker route broken"
+    ],
+    "session_bound_confirmation": false
+  },
+  "site_domains": [
+    "infotracer.com"
+  ],
+  "specialty_report": null,
+  "status": {
+    "listing_discovery_retired": false,
+    "opt_out_support": "unsupported",
+    "reason": "No longer covered: the public search now redirects to another broker paid-report funnel.",
+    "removal_reliability": "not_removable",
+    "state": "deprecated"
+  },
+  "timing": {
+    "est_processing_days": null,
+    "expected_removal_days": "1-14 days",
+    "expected_turnaround": null,
+    "first_check_days": 14,
+    "later_check_days": [
+      30,
+      90
+    ],
+    "ongoing_recheck_days": 90,
+    "reappearance_risk": null
+  },
+  "verification": {
+    "automated_recheck_unavailable": false,
+    "support": "unsupported"
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "category": "people_search",
+  "contact_phones": [],
+  "coverage": {
+    "backend_cluster_note": null,
+    "coverage_last_verified": null,
+    "covers": [
+      "freepeopledirectory"
+    ],
+    "parent_broker_id": null,
+    "parent_network": "Spokeo"
+  },
+  "deletion_lane": {
+    "email": "privacy@spokeo.com",
+    "last_verified": null,
+    "notes": "First hide each listing. Then email Spokeo to ask for full deletion.",
+    "prefer_deletion": true,
+    "via": "email_followup"
+  },
+  "false_success_traps": [
+    "A robot check that was not really solved means the form was not sent, even if the page looks unchanged.",
+    "Free-search suppression is not the same as full data deletion.",
+    "If the page still shows the boxes for the listing link and the email, and no message about checking your email, nothing was sent.",
+    "The form can lose the listing link or the email after the robot check. Check both are still there before you submit.",
+    "The on-page message is only half of it. Without the click on the emailed link, the listing stays up."
+  ],
+  "genuine_confirmation": "After submit, the page tells you to check your inbox for a confirmation email and to click the link to complete the process. The request counts only after that link is clicked. Removal is said to take 24 to 48 hours after that.",
+  "id": "spokeo",
+  "knowledge_verification": {
+    "catalog_last_reviewed": "2026-05-31",
+    "dates": {
+      "blind_opt_out": null,
+      "coverage": null,
+      "deletion_lane": null,
+      "knowledge": null,
+      "opt_out_url": "2026-07-01",
+      "playbook": "2026-07-01",
+      "primary_source": "2026-07-01"
+    },
+    "evidence_grade": "B",
+    "knowledge_block_status": "supervised_recheck_required",
+    "last_verified": "2026-07-01",
+    "last_verified_source": "playbook",
+    "metadata_confidence": "internal_verified",
+    "status": "verified"
+  },
+  "name": "Spokeo",
+  "opt_out_routes": [
+    {
+      "email": null,
+      "listing_free": null,
+      "method": "web_form",
+      "note": null,
+      "source": "module_code",
+      "url": "https://www.spokeo.com/optout",
+      "via_broker_id": null
+    },
+    {
+      "email": "privacy@spokeo.com",
+      "listing_free": null,
+      "method": "email",
+      "note": "Use the privacy address for a full rights request. Also use it when the form rejects a confirmed listing.",
+      "source": "module_metadata",
+      "url": null,
+      "via_broker_id": null
+    }
+  ],
+  "opt_out_url_check": {
+    "checked": "2026-11-16",
+    "note": "A plain page request got an answer, but the form was not in it. An automated browser the same day got a bare \"403 Forbidden\" page with nothing to clear. The user's everyday browser was not tried.",
+    "result": "blocked",
+    "url": "https://www.spokeo.com/optout"
+  },
+  "parent_company": "Spokeo, Inc.",
+  "parent_contact_domains": [],
+  "playbook": {
+    "guided_workflow_types": [
+      "rights_request_email",
+      "third_party_pii_deletion"
+    ],
+    "omitted_step_count": 1,
+    "quirks": [
+      "A name listing link ends with the name, state, city, and a number.",
+      "A single request may cover only one listing link.",
+      "Different search variations can expose more than one listing link.",
+      "Free-search suppression is not the same as full data deletion.",
+      "If the form shows an error, try again in a private window.",
+      "If the form still fails, send the listing links to the Spokeo privacy email address.",
+      "Links that contain the word purchase are rejected. Search again in a private window.",
+      "Multiple listing URLs may exist for one person; each URL can need its own opt-out.",
+      "The form has a robot check. It needs no account."
+    ],
+    "steps": [
+      "Collect each distinct public listing link that belongs to the profile.",
+      "Open the Spokeo opt-out page. Paste one listing link into the form.",
+      "Enter your email address. Then finish the robot check yourself.",
+      "Open the email from Spokeo and click the link at the bottom.",
+      "Repeat for each listing link. Then recheck all names and places again."
+    ],
+    "steps_source": "source_app_playbook",
+    "suppression_lane": null
+  },
+  "provenance": [
+    {
+      "field": "false_success_traps",
+      "ref": "docs/broker-status.md",
+      "source": "repo_doc"
+    },
+    {
+      "field": "false_success_traps",
+      "ref": "src/brokers/spokeo.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "genuine_confirmation",
+      "ref": "docs/BROKERS.md",
+      "source": "repo_doc"
+    },
+    {
+      "field": "genuine_confirmation",
+      "ref": "src/brokers/spokeo.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "opt_out_url",
+      "ref": "src/brokers/spokeo.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "requirements",
+      "ref": "electron/services/brokerCatalog.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "requirements",
+      "ref": "src/brokers/spokeo.ts",
+      "source": "module_code"
+    }
+  ],
+  "requirements": {
+    "account": false,
+    "browser_challenge_expected": true,
+    "captcha_expected": false,
+    "captcha_likelihood": "medium",
+    "date_of_birth": false,
+    "email_confirmation": true,
+    "government_id": false,
+    "identity_fields": null,
+    "listing_url": true,
+    "manual_fallback_required": true,
+    "phone": false,
+    "required_actions": [
+      "search deprecated",
+      "email confirmation likely"
+    ],
+    "session_bound_confirmation": false
+  },
+  "site_domains": [
+    "spokeo.com"
+  ],
+  "specialty_report": null,
+  "status": {
+    "listing_discovery_retired": true,
+    "opt_out_support": "assisted",
+    "reason": null,
+    "removal_reliability": "medium",
+    "state": "active"
+  },
+  "timing": {
+    "est_processing_days": 2,
+    "expected_removal_days": "1-14 days",
+    "expected_turnaround": null,
+    "first_check_days": 2,
+    "later_check_days": [
+      30,
+      90
+    ],
+    "ongoing_recheck_days": 30,
+    "reappearance_risk": null
+  },
+  "verification": {
+    "automated_recheck_unavailable": false,
+    "support": "supported"
+  }
+}

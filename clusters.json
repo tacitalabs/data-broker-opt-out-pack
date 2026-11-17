@@ -1,0 +1,341 @@
+{
+  "clusters": [
+    {
+      "children": [
+        {
+          "broker_id": "bumper",
+          "has_broker_file": false,
+          "name": "Bumper"
+        },
+        {
+          "broker_id": "freephonetracer",
+          "has_broker_file": false,
+          "name": "FreePhoneTracer"
+        },
+        {
+          "broker_id": "moneybot5000",
+          "has_broker_file": false,
+          "name": "MoneyBot5000"
+        },
+        {
+          "broker_id": "neighborwho",
+          "has_broker_file": false,
+          "name": "NeighborWho"
+        },
+        {
+          "broker_id": "numberguru",
+          "has_broker_file": false,
+          "name": "NumberGuru"
+        },
+        {
+          "broker_id": "ownerly",
+          "has_broker_file": false,
+          "name": "Ownerly"
+        },
+        {
+          "broker_id": "peoplelooker",
+          "has_broker_file": false,
+          "name": "PeopleLooker"
+        },
+        {
+          "broker_id": "peoplesmart",
+          "has_broker_file": false,
+          "name": "PeopleSmart"
+        },
+        {
+          "broker_id": "reversephone",
+          "has_broker_file": false,
+          "name": "ReversePhone"
+        }
+      ],
+      "last_verified": null,
+      "parent_broker_id": "beenverified",
+      "parent_network": "The Lifetime Value Co.",
+      "verification_note": "Existing internal grouping only. Recheck broker-owned pages before treating cross-site coverage as proven."
+    },
+    {
+      "children": [
+        {
+          "broker_id": "addresses-com",
+          "has_broker_file": true,
+          "name": "Addresses.com"
+        },
+        {
+          "broker_id": "anywho",
+          "has_broker_file": false,
+          "name": "AnyWho"
+        },
+        {
+          "broker_id": "background-hawk",
+          "has_broker_file": false,
+          "name": "Background Hawk"
+        },
+        {
+          "broker_id": "classmates",
+          "has_broker_file": true,
+          "name": "Classmates"
+        },
+        {
+          "broker_id": "criminal-com",
+          "has_broker_file": false,
+          "name": "Criminal.com"
+        },
+        {
+          "broker_id": "criminaldatacheck",
+          "has_broker_file": false,
+          "name": "CriminalDataCheck"
+        },
+        {
+          "broker_id": "criminalrecords-com",
+          "has_broker_file": false,
+          "name": "CriminalRecords.com"
+        },
+        {
+          "broker_id": "easybackgroundchecks",
+          "has_broker_file": false,
+          "name": "EasyBackgroundChecks"
+        },
+        {
+          "broker_id": "instantcheckmate",
+          "has_broker_file": false,
+          "name": "Instant Checkmate"
+        },
+        {
+          "broker_id": "instantcheckspy",
+          "has_broker_file": false,
+          "name": "InstantCheckSpy"
+        },
+        {
+          "broker_id": "northcarolina-public-records",
+          "has_broker_file": false,
+          "name": "NorthCarolinaPublicRecords.org"
+        },
+        {
+          "broker_id": "peopleconnect",
+          "has_broker_file": false,
+          "name": "PeopleConnect"
+        },
+        {
+          "broker_id": "peoplefind-com",
+          "has_broker_file": false,
+          "name": "PeopleFind.com"
+        },
+        {
+          "broker_id": "peoplefinder",
+          "has_broker_file": false,
+          "name": "PeopleFinder"
+        },
+        {
+          "broker_id": "public-libraries",
+          "has_broker_file": false,
+          "name": "Public Libraries"
+        },
+        {
+          "broker_id": "publicrecords-com",
+          "has_broker_file": false,
+          "name": "PublicRecords.com"
+        },
+        {
+          "broker_id": "recordspage",
+          "has_broker_file": false,
+          "name": "RecordsPage"
+        },
+        {
+          "broker_id": "recordsquarry",
+          "has_broker_file": false,
+          "name": "RecordsQuarry"
+        },
+        {
+          "broker_id": "sheriffsdepartment-net",
+          "has_broker_file": false,
+          "name": "SheriffsDepartment.net"
+        },
+        {
+          "broker_id": "snoopstation",
+          "has_broker_file": false,
+          "name": "Snoopstation"
+        },
+        {
+          "broker_id": "southcarolina-public-records",
+          "has_broker_file": false,
+          "name": "SouthCarolinaPublicRecords.com"
+        },
+        {
+          "broker_id": "truthfinder",
+          "has_broker_file": false,
+          "name": "TruthFinder"
+        },
+        {
+          "broker_id": "ussearch",
+          "has_broker_file": false,
+          "name": "US Search"
+        },
+        {
+          "broker_id": "zabasearch",
+          "has_broker_file": false,
+          "name": "ZabaSearch"
+        }
+      ],
+      "last_verified": null,
+      "parent_broker_id": "intelius",
+      "parent_network": "PeopleConnect",
+      "verification_note": "Existing internal grouping only. Recheck broker-owned pages before treating cross-site coverage as proven."
+    },
+    {
+      "children": [
+        {
+          "broker_id": "411",
+          "has_broker_file": false,
+          "name": "411"
+        }
+      ],
+      "last_verified": null,
+      "parent_broker_id": "whitepages",
+      "parent_network": "Whitepages",
+      "verification_note": "Existing internal grouping only. Recheck broker-owned pages before treating cross-site coverage as proven."
+    }
+  ],
+  "other_parent_coverage": [
+    {
+      "coverage_last_verified": null,
+      "covers": [
+        "AlabamaCourtRecords.us",
+        "AlaskaCourtRecords.us",
+        "ArizonaCourtRecords.us",
+        "ArkansasCourtRecords.us",
+        "CaliforniaCourtRecords.us",
+        "ColoradoCourtRecords.us",
+        "ConnecticutCourtRecords.us",
+        "DelawareCourtRecords.us",
+        "FloridaCourtRecords.us",
+        "GeorgiaCourtRecords.us",
+        "IdahoCourtRecords.us",
+        "IllinoisCourtRecords.us",
+        "IndianaCourtRecords.us",
+        "IowaCourtRecords.us",
+        "KansasCourtRecords.us",
+        "KentuckyCourtRecords.us",
+        "LouisianaCourtRecords.us",
+        "MaineCourtRecords.us",
+        "MarylandCourtRecords.us",
+        "MassachusetssCourtRecords.us",
+        "MassachusettsCourtRecords.us",
+        "MichiganCourtRecords.us",
+        "MinnesotaCourtRecords.us",
+        "MississippiCourtRecords.us",
+        "MissouriCourtRecords.us",
+        "MontanaCourtRecords.us",
+        "NebraskaCourtRecords.us",
+        "NevadaCourtRecords.us",
+        "NewHampshireCourtRecords.us",
+        "NewJerseyCourtRecords.us",
+        "NewMexicoCourtRecords.us",
+        "NewYorkCourtRecords.us",
+        "NorthCarolinaCourtRecords.us",
+        "NorthDakotaCourtRecords.us",
+        "OhioCourtRecords.us",
+        "OklahomaCourtRecords.us",
+        "OregonCourtRecords.us",
+        "PennsylvaniaCourtRecords.us",
+        "RhodeIslandCourtRecord.us",
+        "RhodeIslandCourtRecords.us",
+        "SouthCarolinaCourtRecords.us",
+        "SouthDakotaCourtRecords.us",
+        "TennesseeCourtRecords.us",
+        "TexasCourtRecords.us",
+        "UtahCourtRecords.us",
+        "VermontCourtRecords.us",
+        "VirginiaCourtRecords.us",
+        "WashingtonCourtRecords.us",
+        "WestVirginiaCourtRecords.us",
+        "WisconsinCourtRecords.us",
+        "WyomingCourtRecords.us"
+      ],
+      "parent_broker_id": "courtrecords-us"
+    },
+    {
+      "coverage_last_verified": null,
+      "covers": [
+        "ColoradoResidentDirectory",
+        "Connecticut Resident Directory",
+        "Florida Voter Directory",
+        "Michigan Residents",
+        "North Carolina Residents",
+        "Ohio Resident Directory",
+        "Ohio Residents"
+      ],
+      "parent_broker_id": "resident-directory"
+    },
+    {
+      "coverage_last_verified": null,
+      "covers": [
+        "freepeopledirectory"
+      ],
+      "parent_broker_id": "spokeo"
+    },
+    {
+      "coverage_last_verified": null,
+      "covers": [
+        "Alabama Arrests",
+        "Alaska Arrests",
+        "Arizona Arrests",
+        "Arkansas Arrests",
+        "California Arrests",
+        "Colorado Arrests",
+        "Connecticut Arrests",
+        "Delaware Arrests",
+        "Florida Arrests",
+        "Georgia Arrests",
+        "Hawaii Arrests",
+        "Idaho Arrests",
+        "Illinois Arrests",
+        "Indiana Arrests",
+        "Iowa Arrests",
+        "Kansas Arrests",
+        "Kentucky Arrests",
+        "Louisiana Arrests",
+        "Maine Arrests",
+        "Maryland Arrests",
+        "Massachusetts Arrests",
+        "Michigan Arrests",
+        "Minnesota Arrests",
+        "Mississippi Arrests",
+        "Missouri Arrests",
+        "Montana Arrests",
+        "Nebraska Arrests",
+        "Nevada Arrests",
+        "New Hampshire Arrests",
+        "New Jersey Arrests",
+        "New Mexico Arrests",
+        "New York Arrests",
+        "North Carolina Arrests",
+        "North Dakota Arrests",
+        "Ohio Arrests",
+        "Oklahoma Arrests",
+        "Oregon Arrests",
+        "Pennsylvania Arrests",
+        "Rhode Island Arrests",
+        "South Carolina Arrests",
+        "South Dakota Arrests",
+        "Tennessee Arrests",
+        "Texas Arrests",
+        "Utah Arrests",
+        "Vermont Arrests",
+        "Virginia Arrests",
+        "Washington Arrests",
+        "Washington DC Arrests",
+        "West Virginia Arrests",
+        "Wisconsin Arrests",
+        "Wyoming Arrests"
+      ],
+      "parent_broker_id": "state-arrests"
+    },
+    {
+      "coverage_last_verified": null,
+      "covers": [
+        "ThePublicIndex"
+      ],
+      "parent_broker_id": "thepublicindex"
+    }
+  ]
+}

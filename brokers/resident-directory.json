@@ -1,0 +1,208 @@
+{
+  "category": "directory",
+  "contact_phones": [],
+  "coverage": {
+    "backend_cluster_note": null,
+    "coverage_last_verified": null,
+    "covers": [
+      "ColoradoResidentDirectory",
+      "Connecticut Resident Directory",
+      "Florida Voter Directory",
+      "Michigan Residents",
+      "North Carolina Residents",
+      "Ohio Resident Directory",
+      "Ohio Residents"
+    ],
+    "parent_broker_id": null,
+    "parent_network": "Resident Directory / voter-directory state sites"
+  },
+  "deletion_lane": null,
+  "false_success_traps": [
+    "Each state site is separate. A request on one state site does not cover a listing on another.",
+    "Only six state sites are covered. A listing from another state has no route here. Do not send it to a different state's form.",
+    "Sending the request is not proof of removal. Treat the listing as removed only after a later check of the same state site no longer shows it."
+  ],
+  "genuine_confirmation": null,
+  "id": "resident-directory",
+  "knowledge_verification": {
+    "catalog_last_reviewed": "2026-05-31",
+    "dates": {
+      "blind_opt_out": null,
+      "coverage": null,
+      "deletion_lane": null,
+      "knowledge": null,
+      "opt_out_url": "2026-07-09",
+      "playbook": "2026-07-09",
+      "primary_source": "2026-07-09"
+    },
+    "evidence_grade": "C",
+    "knowledge_block_status": null,
+    "last_verified": "2026-07-09",
+    "last_verified_source": "playbook",
+    "metadata_confidence": "research_only",
+    "status": "verified"
+  },
+  "name": "Resident Directory network",
+  "opt_out_routes": [
+    {
+      "email": null,
+      "listing_free": null,
+      "method": "web_form",
+      "note": null,
+      "source": "module_code",
+      "url": "https://northcarolinaresidentdatabase.com/opt-out",
+      "via_broker_id": null
+    },
+    {
+      "email": null,
+      "listing_free": null,
+      "method": "web_form",
+      "note": null,
+      "source": "module_code",
+      "url": "https://www.coloradoresidentdirectory.com/opt-out",
+      "via_broker_id": null
+    },
+    {
+      "email": null,
+      "listing_free": null,
+      "method": "web_form",
+      "note": null,
+      "source": "module_code",
+      "url": "https://www.connecticutresidentdirectory.com/opt-out",
+      "via_broker_id": null
+    },
+    {
+      "email": null,
+      "listing_free": null,
+      "method": "web_form",
+      "note": null,
+      "source": "module_code",
+      "url": "https://www.floridavoterdirectory.com/opt-out",
+      "via_broker_id": null
+    },
+    {
+      "email": null,
+      "listing_free": null,
+      "method": "web_form",
+      "note": null,
+      "source": "module_code",
+      "url": "https://www.michiganresidentdatabase.com/opt-out",
+      "via_broker_id": null
+    },
+    {
+      "email": null,
+      "listing_free": null,
+      "method": "web_form",
+      "note": null,
+      "source": "module_code",
+      "url": "https://www.ohioresidentdirectory.com/opt-out",
+      "via_broker_id": null
+    }
+  ],
+  "opt_out_url_check": {
+    "checked": "2026-11-16",
+    "note": "There is one opt-out page per state site, so no single address is given here. Of the six pages, the Colorado page loaded. The Connecticut, Florida, Michigan, North Carolina, and Ohio pages returned a browser challenge (HTTP 403) to a plain page request.",
+    "result": "blocked",
+    "url": null
+  },
+  "parent_company": null,
+  "parent_contact_domains": [],
+  "playbook": {
+    "guided_workflow_types": [
+      "assisted_privacy_form"
+    ],
+    "omitted_step_count": 0,
+    "quirks": [
+      "Coverage is state-limited. Unsupported states return no match rather than falling through to a wrong state directory.",
+      "Resident and voter directory exposure is Extended Records. It is not a normal people-search opt-out lane."
+    ],
+    "steps": [
+      "Have the link to your listing ready. Note which state site it is on.",
+      "Open the opt-out page on that same state site. Each state site has its own page.",
+      "Pass the browser check if one appears.",
+      "Paste the link to your listing into the form. On the Colorado site this is step 1 and the form also asks a simple quiz question.",
+      "Submit the form and follow any further steps the site shows. This project has no record of the later steps.",
+      "Check the same state site again later to see whether the listing is gone."
+    ],
+    "steps_source": "curated",
+    "suppression_lane": "Use the state-site opt-out page for the specific listing, then recheck the originating site later. Treat as assisted until verified."
+  },
+  "provenance": [
+    {
+      "field": "false_success_traps",
+      "ref": "electron/services/brokerCatalog.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "false_success_traps",
+      "ref": "src/brokers/residentdirectory.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "requirements",
+      "ref": "https://www.coloradoresidentdirectory.com/opt-out",
+      "source": "broker_page"
+    },
+    {
+      "field": "steps",
+      "ref": "https://www.coloradoresidentdirectory.com/opt-out",
+      "source": "broker_page"
+    },
+    {
+      "field": "steps",
+      "ref": "src/brokers/residentdirectory.ts",
+      "source": "module_code"
+    }
+  ],
+  "requirements": {
+    "account": null,
+    "browser_challenge_expected": true,
+    "captcha_expected": false,
+    "captcha_likelihood": "low",
+    "date_of_birth": false,
+    "email_confirmation": false,
+    "government_id": null,
+    "identity_fields": null,
+    "listing_url": true,
+    "manual_fallback_required": true,
+    "phone": null,
+    "required_actions": [
+      "voter/resident public-record source",
+      "assisted site opt-out",
+      "state-limited coverage"
+    ],
+    "session_bound_confirmation": false
+  },
+  "site_domains": [
+    "coloradoresidentdirectory.com",
+    "connecticutresidentdirectory.com",
+    "floridavoterdirectory.com",
+    "michiganresidentdatabase.com",
+    "northcarolinaresidentdatabase.com",
+    "ohioresidentdirectory.com"
+  ],
+  "specialty_report": null,
+  "status": {
+    "listing_discovery_retired": false,
+    "opt_out_support": "assisted",
+    "reason": null,
+    "removal_reliability": "low",
+    "state": "active"
+  },
+  "timing": {
+    "est_processing_days": null,
+    "expected_removal_days": "1-14 days",
+    "expected_turnaround": null,
+    "first_check_days": 14,
+    "later_check_days": [
+      30,
+      90
+    ],
+    "ongoing_recheck_days": 90,
+    "reappearance_risk": null
+  },
+  "verification": {
+    "automated_recheck_unavailable": false,
+    "support": "assisted"
+  }
+}

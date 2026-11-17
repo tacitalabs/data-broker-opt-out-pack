@@ -1,0 +1,170 @@
+{
+  "category": "people_search",
+  "contact_phones": [],
+  "coverage": {
+    "backend_cluster_note": null,
+    "coverage_last_verified": null,
+    "covers": [],
+    "parent_broker_id": null,
+    "parent_network": null
+  },
+  "deletion_lane": null,
+  "false_success_traps": [
+    "A captcha or \"verification required\" page is not a confirmation and not proof the listing is gone.",
+    "A message that a verification email was sent is not a finished request. The email step still has to be completed.",
+    "A sent request is not a removal. Only a later check of the listing shows that.",
+    "The \"Notice of Right to Opt-Out\" page uses words like \"removal\" and \"confirmation\". It is only instructions. It was once read as a sent request by mistake."
+  ],
+  "genuine_confirmation": "A page that plainly says the removal request was received or was successful, and that is not the opt-out instructions page. This project has not yet seen that final page in a live run, so its exact wording is unknown.",
+  "id": "truepeoplesearch",
+  "knowledge_verification": {
+    "catalog_last_reviewed": "2026-05-31",
+    "dates": {
+      "blind_opt_out": null,
+      "coverage": null,
+      "deletion_lane": null,
+      "knowledge": null,
+      "opt_out_url": null,
+      "playbook": null,
+      "primary_source": null
+    },
+    "evidence_grade": "A",
+    "knowledge_block_status": null,
+    "last_verified": null,
+    "last_verified_source": null,
+    "metadata_confidence": "cross_checked",
+    "status": "unverified"
+  },
+  "name": "TruePeopleSearch",
+  "opt_out_routes": [
+    {
+      "email": null,
+      "listing_free": null,
+      "method": "web_form",
+      "note": null,
+      "source": "module_metadata",
+      "url": null,
+      "via_broker_id": null
+    },
+    {
+      "email": null,
+      "listing_free": null,
+      "method": "web_form",
+      "note": null,
+      "source": "curated",
+      "url": "https://www.truepeoplesearch.com/removal",
+      "via_broker_id": null
+    }
+  ],
+  "opt_out_url_check": {
+    "checked": "2026-11-16",
+    "note": "A plain request got a \"Captcha Challenge\" page. A real browser and a person are needed to get past it.",
+    "result": "blocked",
+    "url": "https://www.truepeoplesearch.com/removal"
+  },
+  "parent_company": null,
+  "parent_contact_domains": [],
+  "playbook": {
+    "guided_workflow_types": [],
+    "omitted_step_count": 0,
+    "quirks": [],
+    "steps": [
+      "Have the link to your listing ready.",
+      "Open the listing in a normal browser. Solve the slider or human check if one appears.",
+      "Scroll to the bottom of the listing and press \"Remove This Record\".",
+      "Solve any human check that appears next.",
+      "Read the page you land on. In this project's runs it was a \"Notice of Right to Opt-Out\" page that lists ways to opt out. That page is instructions, not a confirmation.",
+      "Follow the method that page offers. This project has not mapped that part, so a person must finish it.",
+      "Only count the request as sent when a page plainly says the request was received.",
+      "Check the listing again later to see that it is gone."
+    ],
+    "steps_source": "curated",
+    "suppression_lane": null
+  },
+  "provenance": [
+    {
+      "field": "false_success_traps",
+      "ref": "docs/broker-status.md",
+      "source": "repo_doc"
+    },
+    {
+      "field": "false_success_traps",
+      "ref": "docs/BROKERS.md",
+      "source": "repo_doc"
+    },
+    {
+      "field": "false_success_traps",
+      "ref": "src/brokers/truepeoplesearch.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "genuine_confirmation",
+      "ref": "src/brokers/truepeoplesearch.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "opt_out_url",
+      "ref": "docs/broker-dossier.md",
+      "source": "repo_doc"
+    },
+    {
+      "field": "requirements",
+      "ref": "src/brokers/truepeoplesearch.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "steps",
+      "ref": "docs/BROKERS.md",
+      "source": "repo_doc"
+    },
+    {
+      "field": "steps",
+      "ref": "src/brokers/truepeoplesearch.ts",
+      "source": "module_code"
+    }
+  ],
+  "requirements": {
+    "account": null,
+    "browser_challenge_expected": true,
+    "captcha_expected": false,
+    "captcha_likelihood": "high",
+    "date_of_birth": false,
+    "email_confirmation": false,
+    "government_id": null,
+    "identity_fields": null,
+    "listing_url": true,
+    "manual_fallback_required": true,
+    "phone": null,
+    "required_actions": [
+      "browser challenge possible"
+    ],
+    "session_bound_confirmation": false
+  },
+  "site_domains": [
+    "truepeoplesearch.com"
+  ],
+  "specialty_report": null,
+  "status": {
+    "listing_discovery_retired": false,
+    "opt_out_support": "assisted",
+    "reason": null,
+    "removal_reliability": "high",
+    "state": "active"
+  },
+  "timing": {
+    "est_processing_days": null,
+    "expected_removal_days": "1-14 days",
+    "expected_turnaround": null,
+    "first_check_days": 14,
+    "later_check_days": [
+      30,
+      90
+    ],
+    "ongoing_recheck_days": 30,
+    "reappearance_risk": null
+  },
+  "verification": {
+    "automated_recheck_unavailable": false,
+    "support": "supported"
+  }
+}

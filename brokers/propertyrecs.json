@@ -1,0 +1,141 @@
+{
+  "category": "property",
+  "contact_phones": [],
+  "coverage": {
+    "backend_cluster_note": null,
+    "coverage_last_verified": null,
+    "covers": [],
+    "parent_broker_id": null,
+    "parent_network": null
+  },
+  "deletion_lane": null,
+  "false_success_traps": [
+    "Pressing submit is not a confirmation. Look for the site's own message that the request was received before you report success.",
+    "This site shows property records tied to an address. This project does not treat it as a normal people-search removal target, and it has not confirmed that the form removes a listing."
+  ],
+  "genuine_confirmation": null,
+  "id": "propertyrecs",
+  "knowledge_verification": {
+    "catalog_last_reviewed": "2026-05-31",
+    "dates": {
+      "blind_opt_out": null,
+      "coverage": null,
+      "deletion_lane": null,
+      "knowledge": null,
+      "opt_out_url": null,
+      "playbook": null,
+      "primary_source": null
+    },
+    "evidence_grade": "C",
+    "knowledge_block_status": null,
+    "last_verified": null,
+    "last_verified_source": null,
+    "metadata_confidence": "research_only",
+    "status": "unverified"
+  },
+  "name": "PropertyRecs",
+  "opt_out_routes": [
+    {
+      "email": null,
+      "listing_free": null,
+      "method": "web_form",
+      "note": null,
+      "source": "module_code",
+      "url": "https://dashboard.propertyrecs.com/opt-out",
+      "via_broker_id": null
+    }
+  ],
+  "opt_out_url_check": {
+    "checked": "2026-11-16",
+    "note": "A plain page request got an empty firewall challenge response (HTTP 202). A normal browser is needed to see the page.",
+    "result": "blocked",
+    "url": "https://dashboard.propertyrecs.com/opt-out"
+  },
+  "parent_company": null,
+  "parent_contact_domains": [],
+  "playbook": {
+    "guided_workflow_types": [],
+    "omitted_step_count": 0,
+    "quirks": [],
+    "steps": [
+      "Open the PropertyRecs opt-out page.",
+      "Pass the robot check if one appears.",
+      "On the opt-out form, fill in the first and last name shown on the listing.",
+      "Enter the city and state shown on the listing.",
+      "Pass the robot check again if it appears, then submit the form.",
+      "Read the page that comes next and follow any further steps it asks for. This project has no record of what those steps are."
+    ],
+    "steps_source": "curated",
+    "suppression_lane": null
+  },
+  "provenance": [
+    {
+      "field": "false_success_traps",
+      "ref": "electron/services/brokerCatalog.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "false_success_traps",
+      "ref": "src/brokers/propertyrecs.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "opt_out_url",
+      "ref": "src/brokers/propertyrecs.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "requirements",
+      "ref": "src/brokers/propertyrecs.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "steps",
+      "ref": "src/brokers/propertyrecs.ts",
+      "source": "module_code"
+    }
+  ],
+  "requirements": {
+    "account": null,
+    "browser_challenge_expected": true,
+    "captcha_expected": false,
+    "captcha_likelihood": "medium",
+    "date_of_birth": false,
+    "email_confirmation": false,
+    "government_id": null,
+    "identity_fields": null,
+    "listing_url": false,
+    "manual_fallback_required": false,
+    "phone": null,
+    "required_actions": [],
+    "session_bound_confirmation": false
+  },
+  "site_domains": [
+    "dashboard.propertyrecs.com",
+    "propertyrecs.com"
+  ],
+  "specialty_report": null,
+  "status": {
+    "listing_discovery_retired": false,
+    "opt_out_support": "unknown",
+    "reason": null,
+    "removal_reliability": "unknown",
+    "state": "active"
+  },
+  "timing": {
+    "est_processing_days": null,
+    "expected_removal_days": "1-14 days",
+    "expected_turnaround": null,
+    "first_check_days": 14,
+    "later_check_days": [
+      30,
+      90
+    ],
+    "ongoing_recheck_days": 90,
+    "reappearance_risk": null
+  },
+  "verification": {
+    "automated_recheck_unavailable": false,
+    "support": "unsupported"
+  }
+}

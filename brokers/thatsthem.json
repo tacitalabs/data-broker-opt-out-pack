@@ -1,0 +1,160 @@
+{
+  "category": "people_search",
+  "contact_phones": [],
+  "coverage": {
+    "backend_cluster_note": null,
+    "coverage_last_verified": null,
+    "covers": [],
+    "parent_broker_id": null,
+    "parent_network": null
+  },
+  "deletion_lane": null,
+  "false_success_traps": [
+    "A page that still shows the form after you press submit is not a confirmation.",
+    "If the human check is not solved, the form does not go through. Do not count that as sent.",
+    "The \"Request Submitted!\" page means the request was received. It does not prove the listing is gone.",
+    "The form can reject a request when the city and state do not match the address. A rejected form is not a request."
+  ],
+  "genuine_confirmation": "The page shows the heading \"Request Submitted!\" together with a line saying the opt-out request was received. Both must be visible. A confirmation email is expected afterwards.",
+  "id": "thatsthem",
+  "knowledge_verification": {
+    "catalog_last_reviewed": "2026-05-31",
+    "dates": {
+      "blind_opt_out": null,
+      "coverage": null,
+      "deletion_lane": null,
+      "knowledge": null,
+      "opt_out_url": null,
+      "playbook": null,
+      "primary_source": null
+    },
+    "evidence_grade": "A",
+    "knowledge_block_status": null,
+    "last_verified": null,
+    "last_verified_source": null,
+    "metadata_confidence": "cross_checked",
+    "status": "unverified"
+  },
+  "name": "ThatsThem",
+  "opt_out_routes": [
+    {
+      "email": null,
+      "listing_free": null,
+      "method": "web_form",
+      "note": null,
+      "source": "module_code",
+      "url": "https://thatsthem.com/optout",
+      "via_broker_id": null
+    }
+  ],
+  "opt_out_url_check": {
+    "checked": "2026-11-16",
+    "note": "A plain request got a \"Checking your browser\" security page, not the form. A real browser is needed.",
+    "result": "blocked",
+    "url": "https://thatsthem.com/optout"
+  },
+  "parent_company": null,
+  "parent_contact_domains": [],
+  "playbook": {
+    "guided_workflow_types": [],
+    "omitted_step_count": 0,
+    "quirks": [],
+    "steps": [
+      "Open the ThatsThem opt-out page in a normal browser.",
+      "Fill in the form with the details shown on your listing: full name, street address, city, state, and ZIP code.",
+      "Enter an email address and a phone number. The form asks for both.",
+      "Complete the \"I am human\" check on the page.",
+      "Press the submit button.",
+      "Wait for the page to say \"Request Submitted!\" and that the opt-out request was received.",
+      "Watch your inbox. The project notes say a confirmation email should arrive within 72 hours.",
+      "Check the listing again later to see that it is gone."
+    ],
+    "steps_source": "curated",
+    "suppression_lane": null
+  },
+  "provenance": [
+    {
+      "field": "false_success_traps",
+      "ref": "docs/broker-status.md",
+      "source": "repo_doc"
+    },
+    {
+      "field": "false_success_traps",
+      "ref": "src/brokers/thatsthem.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "genuine_confirmation",
+      "ref": "src/brokers/thatsthem.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "opt_out_url",
+      "ref": "src/brokers/thatsthem.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "requirements",
+      "ref": "docs/broker-status.md",
+      "source": "repo_doc"
+    },
+    {
+      "field": "requirements",
+      "ref": "src/brokers/thatsthem.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "steps",
+      "ref": "src/brokers/thatsthem.ts",
+      "source": "module_code"
+    }
+  ],
+  "requirements": {
+    "account": false,
+    "browser_challenge_expected": true,
+    "captcha_expected": true,
+    "captcha_likelihood": "medium",
+    "date_of_birth": false,
+    "email_confirmation": true,
+    "government_id": false,
+    "identity_fields": null,
+    "listing_url": false,
+    "manual_fallback_required": true,
+    "phone": true,
+    "required_actions": [
+      "email confirmation likely",
+      "phone verification possible",
+      "street address required",
+      "ZIP required",
+      "CAPTCHA possible"
+    ],
+    "session_bound_confirmation": false
+  },
+  "site_domains": [
+    "thatsthem.com"
+  ],
+  "specialty_report": null,
+  "status": {
+    "listing_discovery_retired": false,
+    "opt_out_support": "assisted",
+    "reason": null,
+    "removal_reliability": "high",
+    "state": "active"
+  },
+  "timing": {
+    "est_processing_days": null,
+    "expected_removal_days": "1-14 days",
+    "expected_turnaround": null,
+    "first_check_days": 14,
+    "later_check_days": [
+      30,
+      90
+    ],
+    "ongoing_recheck_days": 30,
+    "reappearance_risk": null
+  },
+  "verification": {
+    "automated_recheck_unavailable": false,
+    "support": "supported"
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "category": "people_search",
+  "contact_phones": [],
+  "coverage": {
+    "backend_cluster_note": null,
+    "coverage_last_verified": null,
+    "covers": [],
+    "parent_broker_id": null,
+    "parent_network": null
+  },
+  "deletion_lane": null,
+  "false_success_traps": [
+    "A message that a confirmation was sent and to check your email is not the end. The request counts only after the emailed link is used and the form behind it is sent.",
+    "Paid partner results on the site are not SmartBackgroundChecks listings. Do not count them when you check.",
+    "This project's automation follows an older flow: accept the terms, open the listing, and press the remove button on it. The live page on 2026-11-16 describes an emailed link and a form instead. Go by what the live page shows.",
+    "When you check later, compare the link of the listing. A different person with the same name was once mistaken for the original listing still being up."
+  ],
+  "genuine_confirmation": "The site says you land on a confirmation page stating the request was received and is being processed, and that a confirmation email follows. A page that only says an email was sent, or to check your email for a link, means the request is not finished yet.",
+  "id": "smartbackgroundchecks",
+  "knowledge_verification": {
+    "catalog_last_reviewed": "2026-05-31",
+    "dates": {
+      "blind_opt_out": null,
+      "coverage": null,
+      "deletion_lane": null,
+      "knowledge": null,
+      "opt_out_url": null,
+      "playbook": null,
+      "primary_source": null
+    },
+    "evidence_grade": "A",
+    "knowledge_block_status": null,
+    "last_verified": null,
+    "last_verified_source": null,
+    "metadata_confidence": "cross_checked",
+    "status": "unverified"
+  },
+  "name": "SmartBackgroundChecks",
+  "opt_out_routes": [
+    {
+      "email": null,
+      "listing_free": null,
+      "method": "web_form",
+      "note": null,
+      "source": "module_code",
+      "url": "https://smartbackgroundchecks.com/optout",
+      "via_broker_id": null
+    }
+  ],
+  "opt_out_url_check": {
+    "checked": "2026-11-16",
+    "note": "HTTP 200 after a redirect to https://www.smartbackgroundchecks.com/remove. The page there describes an emailed-link flow that differs from the older flow in this project's automation.",
+    "result": "loaded",
+    "url": "https://smartbackgroundchecks.com/optout"
+  },
+  "parent_company": "PeopleFinders",
+  "parent_contact_domains": [],
+  "playbook": {
+    "guided_workflow_types": [],
+    "omitted_step_count": 0,
+    "quirks": [],
+    "steps": [
+      "Open the SmartBackgroundChecks opt-out page. It forwards to the site's removal page.",
+      "Choose whether you are the subject of the request or an authorized agent.",
+      "On the opt-out form, fill in your name and an email address, and pass the robot check.",
+      "Open the email from the site and click its link. The site says the link stops working after 24 hours.",
+      "Fill in the opt-out form that the link opens. Fill in every field, and use details that match the listing you want removed.",
+      "Submit and wait for the confirmation page. The site says a confirmation email follows.",
+      "Allow about 3 days, then check that the listing is gone."
+    ],
+    "steps_source": "curated",
+    "suppression_lane": null
+  },
+  "provenance": [
+    {
+      "field": "false_success_traps",
+      "ref": "docs/broker-status.md",
+      "source": "repo_doc"
+    },
+    {
+      "field": "false_success_traps",
+      "ref": "https://www.smartbackgroundchecks.com/remove",
+      "source": "broker_page"
+    },
+    {
+      "field": "false_success_traps",
+      "ref": "src/brokers/smartbackgroundchecks.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "genuine_confirmation",
+      "ref": "https://www.smartbackgroundchecks.com/remove",
+      "source": "broker_page"
+    },
+    {
+      "field": "genuine_confirmation",
+      "ref": "src/brokers/smartbackgroundchecks.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "opt_out_url",
+      "ref": "src/brokers/smartbackgroundchecks.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "requirements",
+      "ref": "https://www.smartbackgroundchecks.com/remove",
+      "source": "broker_page"
+    },
+    {
+      "field": "requirements",
+      "ref": "src/brokers/smartbackgroundchecks.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "steps",
+      "ref": "https://www.smartbackgroundchecks.com/remove",
+      "source": "broker_page"
+    }
+  ],
+  "requirements": {
+    "account": false,
+    "browser_challenge_expected": false,
+    "captcha_expected": false,
+    "captcha_likelihood": "medium",
+    "date_of_birth": false,
+    "email_confirmation": true,
+    "government_id": null,
+    "identity_fields": null,
+    "listing_url": null,
+    "manual_fallback_required": true,
+    "phone": null,
+    "required_actions": [
+      "email confirmation likely"
+    ],
+    "session_bound_confirmation": false
+  },
+  "site_domains": [
+    "smartbackgroundchecks.com"
+  ],
+  "specialty_report": null,
+  "status": {
+    "listing_discovery_retired": false,
+    "opt_out_support": "assisted",
+    "reason": null,
+    "removal_reliability": "high",
+    "state": "active"
+  },
+  "timing": {
+    "est_processing_days": null,
+    "expected_removal_days": "1-14 days",
+    "expected_turnaround": null,
+    "first_check_days": 14,
+    "later_check_days": [
+      30,
+      90
+    ],
+    "ongoing_recheck_days": 30,
+    "reappearance_risk": null
+  },
+  "verification": {
+    "automated_recheck_unavailable": false,
+    "support": "supported"
+  }
+}

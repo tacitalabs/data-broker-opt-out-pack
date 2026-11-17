@@ -1,0 +1,173 @@
+{
+  "category": "people_search",
+  "contact_phones": [],
+  "coverage": {
+    "backend_cluster_note": null,
+    "coverage_last_verified": null,
+    "covers": [],
+    "parent_broker_id": null,
+    "parent_network": null
+  },
+  "deletion_lane": null,
+  "false_success_traps": [
+    "A page that reloads the first form, or shows no message about an email, is not a confirmation.",
+    "A recheck that was stopped by a browser challenge was once recorded as a removal. A challenge page is not proof the listing is gone.",
+    "The emailed link expires after 24 hours. An unopened link means no request was made.",
+    "The message that a link was emailed is not a sent request. This project records that state as \"more work needed\", not as success."
+  ],
+  "genuine_confirmation": "The real signal comes after the emailed link: a page saying the request was received and is being processed, followed by a confirmation email. The earlier \"we sent you a link\" message only shows the first stage worked.",
+  "id": "usapeoplesearch",
+  "knowledge_verification": {
+    "catalog_last_reviewed": "2026-05-31",
+    "dates": {
+      "blind_opt_out": null,
+      "coverage": null,
+      "deletion_lane": null,
+      "knowledge": null,
+      "opt_out_url": null,
+      "playbook": null,
+      "primary_source": null
+    },
+    "evidence_grade": "A",
+    "knowledge_block_status": null,
+    "last_verified": null,
+    "last_verified_source": null,
+    "metadata_confidence": "cross_checked",
+    "status": "unverified"
+  },
+  "name": "USAPeopleSearch",
+  "opt_out_routes": [
+    {
+      "email": null,
+      "listing_free": null,
+      "method": "web_form",
+      "note": null,
+      "source": "module_code",
+      "url": "https://www.usa-people-search.com/removal",
+      "via_broker_id": null
+    }
+  ],
+  "opt_out_url_check": {
+    "checked": "2026-11-16",
+    "note": "The page loaded as the \"USA People Search Opt-Out Form\" and lists the steps: ask for an emailed link, follow it, fill in the form, see a confirmation page.",
+    "result": "loaded",
+    "url": "https://www.usa-people-search.com/removal"
+  },
+  "parent_company": null,
+  "parent_contact_domains": [],
+  "playbook": {
+    "guided_workflow_types": [],
+    "omitted_step_count": 0,
+    "quirks": [],
+    "steps": [
+      "Open the USA People Search opt-out form.",
+      "Choose whether you are the person on the listing or an agent acting for them.",
+      "On the opt-out form, fill in the first and last name on the listing and an email address you can read.",
+      "Tick the box that lets the site email you about the request.",
+      "Solve the human check, then press \"Begin Removal Process\".",
+      "Wait for the page to say an email with a link was sent.",
+      "Open that email and follow the link within 24 hours. After that the link stops working and you must ask for a new one.",
+      "Fill in the form the link opens. The details should match the listing you want removed.",
+      "Wait for the page that says the request was received and is being processed. A confirmation email should follow.",
+      "Check the listing again after about three days."
+    ],
+    "steps_source": "curated",
+    "suppression_lane": null
+  },
+  "provenance": [
+    {
+      "field": "false_success_traps",
+      "ref": "docs/broker-status.md",
+      "source": "repo_doc"
+    },
+    {
+      "field": "false_success_traps",
+      "ref": "https://www.usa-people-search.com/removal",
+      "source": "broker_page"
+    },
+    {
+      "field": "false_success_traps",
+      "ref": "src/brokers/usapeoplesearch.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "genuine_confirmation",
+      "ref": "https://www.usa-people-search.com/removal",
+      "source": "broker_page"
+    },
+    {
+      "field": "genuine_confirmation",
+      "ref": "src/brokers/usapeoplesearch.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "opt_out_url",
+      "ref": "src/brokers/usapeoplesearch.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "requirements",
+      "ref": "https://www.usa-people-search.com/removal",
+      "source": "broker_page"
+    },
+    {
+      "field": "requirements",
+      "ref": "src/brokers/usapeoplesearch.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "steps",
+      "ref": "https://www.usa-people-search.com/removal",
+      "source": "broker_page"
+    },
+    {
+      "field": "steps",
+      "ref": "src/brokers/usapeoplesearch.ts",
+      "source": "module_code"
+    }
+  ],
+  "requirements": {
+    "account": false,
+    "browser_challenge_expected": true,
+    "captcha_expected": false,
+    "captcha_likelihood": "low",
+    "date_of_birth": false,
+    "email_confirmation": true,
+    "government_id": null,
+    "identity_fields": null,
+    "listing_url": false,
+    "manual_fallback_required": true,
+    "phone": null,
+    "required_actions": [
+      "browser challenge possible"
+    ],
+    "session_bound_confirmation": false
+  },
+  "site_domains": [
+    "usa-people-search.com"
+  ],
+  "specialty_report": null,
+  "status": {
+    "listing_discovery_retired": false,
+    "opt_out_support": "assisted",
+    "reason": null,
+    "removal_reliability": "medium",
+    "state": "active"
+  },
+  "timing": {
+    "est_processing_days": null,
+    "expected_removal_days": "1-14 days",
+    "expected_turnaround": null,
+    "first_check_days": 14,
+    "later_check_days": [
+      30,
+      90
+    ],
+    "ongoing_recheck_days": 30,
+    "reappearance_risk": null
+  },
+  "verification": {
+    "automated_recheck_unavailable": false,
+    "support": "supported"
+  }
+}

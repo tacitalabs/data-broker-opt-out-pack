@@ -1,0 +1,155 @@
+{
+  "category": "people_search",
+  "contact_phones": [],
+  "coverage": {
+    "backend_cluster_note": null,
+    "coverage_last_verified": null,
+    "covers": [],
+    "parent_broker_id": null,
+    "parent_network": null
+  },
+  "deletion_lane": null,
+  "false_success_traps": [
+    "A page that says verification is required, asks you to check a box, or shows a required-field or error message is not a confirmation.",
+    "A security verification page after submit is not a confirmation. Clear it in the same browser tab and wait for the broker's own message.",
+    "The form can lose the listing link or the email after the robot check. If so, the request was not sent as filled.",
+    "This project's automation only sends the form as the person named. It stops if the box for a request on behalf of someone else is ticked.",
+    "When you check later, a security page or a page that lists people by name is not a results page. Both were once read as no results, which looked like a removal."
+  ],
+  "genuine_confirmation": "After submit, the page itself says the form was successfully submitted or the request was received, or tells you to check your email. The broker then sends a request-received email.",
+  "id": "socialcatfish",
+  "knowledge_verification": {
+    "catalog_last_reviewed": "2026-05-31",
+    "dates": {
+      "blind_opt_out": null,
+      "coverage": null,
+      "deletion_lane": null,
+      "knowledge": null,
+      "opt_out_url": null,
+      "playbook": null,
+      "primary_source": null
+    },
+    "evidence_grade": "B",
+    "knowledge_block_status": null,
+    "last_verified": null,
+    "last_verified_source": null,
+    "metadata_confidence": "cross_checked",
+    "status": "unverified"
+  },
+  "name": "SocialCatfish",
+  "opt_out_routes": [
+    {
+      "email": null,
+      "listing_free": null,
+      "method": "web_form",
+      "note": null,
+      "source": "module_code",
+      "url": "https://socialcatfish.com/opt-out/",
+      "via_broker_id": null
+    }
+  ],
+  "opt_out_url_check": {
+    "checked": "2026-11-16",
+    "note": "HTTP 200. The page title is the SocialCatfish opt-out page.",
+    "result": "loaded",
+    "url": "https://socialcatfish.com/opt-out/"
+  },
+  "parent_company": null,
+  "parent_contact_domains": [],
+  "playbook": {
+    "guided_workflow_types": [],
+    "omitted_step_count": 0,
+    "quirks": [],
+    "steps": [
+      "Have the link to your listing ready.",
+      "Open the SocialCatfish opt-out page.",
+      "Pick the state where the person lives. Check that the form shows that state.",
+      "On the opt-out form, fill in the first and last name.",
+      "Paste the link to your listing.",
+      "Enter an email address.",
+      "Pass the robot check. Then check that the link and the email are still in the form.",
+      "Tick the box that confirms the request is for you. Leave the box for requests on behalf of someone else unticked if you are the person named.",
+      "Submit the form and read the page that follows.",
+      "Watch the inbox for the request-received email."
+    ],
+    "steps_source": "curated",
+    "suppression_lane": null
+  },
+  "provenance": [
+    {
+      "field": "false_success_traps",
+      "ref": "docs/broker-status.md",
+      "source": "repo_doc"
+    },
+    {
+      "field": "false_success_traps",
+      "ref": "src/brokers/socialcatfish.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "genuine_confirmation",
+      "ref": "src/brokers/socialcatfish.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "opt_out_url",
+      "ref": "src/brokers/socialcatfish.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "requirements",
+      "ref": "src/brokers/socialcatfish.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "steps",
+      "ref": "src/brokers/socialcatfish.ts",
+      "source": "module_code"
+    }
+  ],
+  "requirements": {
+    "account": false,
+    "browser_challenge_expected": false,
+    "captcha_expected": true,
+    "captcha_likelihood": "medium",
+    "date_of_birth": false,
+    "email_confirmation": false,
+    "government_id": false,
+    "identity_fields": null,
+    "listing_url": true,
+    "manual_fallback_required": true,
+    "phone": false,
+    "required_actions": [
+      "CAPTCHA possible",
+      "manual review possible"
+    ],
+    "session_bound_confirmation": false
+  },
+  "site_domains": [
+    "socialcatfish.com"
+  ],
+  "specialty_report": null,
+  "status": {
+    "listing_discovery_retired": false,
+    "opt_out_support": "assisted",
+    "reason": null,
+    "removal_reliability": "low",
+    "state": "active"
+  },
+  "timing": {
+    "est_processing_days": null,
+    "expected_removal_days": "1-14 days",
+    "expected_turnaround": null,
+    "first_check_days": 14,
+    "later_check_days": [
+      30,
+      90
+    ],
+    "ongoing_recheck_days": 60,
+    "reappearance_risk": null
+  },
+  "verification": {
+    "automated_recheck_unavailable": false,
+    "support": "supported"
+  }
+}

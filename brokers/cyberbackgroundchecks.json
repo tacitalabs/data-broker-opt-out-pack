@@ -1,0 +1,154 @@
+{
+  "category": "people_search",
+  "contact_phones": [],
+  "coverage": {
+    "backend_cluster_note": null,
+    "coverage_last_verified": null,
+    "covers": [],
+    "parent_broker_id": null,
+    "parent_network": null
+  },
+  "deletion_lane": null,
+  "false_success_traps": [
+    "A page that says \"you're not done\" or \"check your email\" means only the first step worked. The emailed link and the final form are still to do.",
+    "A pop-up or message asking for a valid email address means the form was not sent.",
+    "An \"are you human\" page can appear after you press send. That is not a confirmation.",
+    "When checking later, results can run over more than one page. One check read only part of the list and wrongly reported the listing as removed. Look at every page before deciding it is gone."
+  ],
+  "genuine_confirmation": "After you finish the final form opened from the emailed link, the page says the opt-out or removal request was received, submitted, or processed, or thanks you for the request. Nothing earlier counts.",
+  "id": "cyberbackgroundchecks",
+  "knowledge_verification": {
+    "catalog_last_reviewed": "2026-05-31",
+    "dates": {
+      "blind_opt_out": null,
+      "coverage": null,
+      "deletion_lane": null,
+      "knowledge": null,
+      "opt_out_url": null,
+      "playbook": null,
+      "primary_source": null
+    },
+    "evidence_grade": "A",
+    "knowledge_block_status": null,
+    "last_verified": null,
+    "last_verified_source": null,
+    "metadata_confidence": "cross_checked",
+    "status": "unverified"
+  },
+  "name": "CyberBackgroundChecks",
+  "opt_out_routes": [
+    {
+      "email": null,
+      "listing_free": null,
+      "method": "web_form",
+      "note": null,
+      "source": "module_code",
+      "url": "https://cyberbackgroundchecks.com/removal",
+      "via_broker_id": null
+    }
+  ],
+  "opt_out_url_check": {
+    "checked": "2026-11-16",
+    "note": "A plain request got a browser check page (\"Managed Challenge\") instead of the form.",
+    "result": "blocked",
+    "url": "https://cyberbackgroundchecks.com/removal"
+  },
+  "parent_company": null,
+  "parent_contact_domains": [],
+  "playbook": {
+    "guided_workflow_types": [],
+    "omitted_step_count": 0,
+    "quirks": [],
+    "steps": [
+      "Have the link to your listing and an email address ready.",
+      "Open the removal page.",
+      "Complete the \"are you human\" check if one appears.",
+      "Paste the link to your listing and enter your email address.",
+      "Before sending, look at the email box again. The \"are you human\" check can clear it. Type the email again if it is empty.",
+      "Send the form.",
+      "The page says you are not done and tells you to check your email.",
+      "Open the email and click the link.",
+      "Fill in the final form the link opens and send it.",
+      "Wait for the final message that the opt-out or removal request was received."
+    ],
+    "steps_source": "curated",
+    "suppression_lane": null
+  },
+  "provenance": [
+    {
+      "field": "false_success_traps",
+      "ref": "docs/broker-status.md",
+      "source": "repo_doc"
+    },
+    {
+      "field": "false_success_traps",
+      "ref": "src/brokers/cyberbackgroundchecks.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "genuine_confirmation",
+      "ref": "src/brokers/cyberbackgroundchecks.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "opt_out_url",
+      "ref": "src/brokers/cyberbackgroundchecks.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "requirements",
+      "ref": "src/brokers/cyberbackgroundchecks.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "steps",
+      "ref": "src/brokers/cyberbackgroundchecks.ts",
+      "source": "module_code"
+    }
+  ],
+  "requirements": {
+    "account": null,
+    "browser_challenge_expected": true,
+    "captcha_expected": false,
+    "captcha_likelihood": "high",
+    "date_of_birth": false,
+    "email_confirmation": true,
+    "government_id": null,
+    "identity_fields": null,
+    "listing_url": true,
+    "manual_fallback_required": true,
+    "phone": null,
+    "required_actions": [
+      "browser challenge possible",
+      "email confirmation likely"
+    ],
+    "session_bound_confirmation": false
+  },
+  "site_domains": [
+    "cyberbackgroundchecks.com"
+  ],
+  "specialty_report": null,
+  "status": {
+    "listing_discovery_retired": false,
+    "opt_out_support": "assisted",
+    "reason": null,
+    "removal_reliability": "high",
+    "state": "active"
+  },
+  "timing": {
+    "est_processing_days": null,
+    "expected_removal_days": "1-14 days",
+    "expected_turnaround": null,
+    "first_check_days": 14,
+    "later_check_days": [
+      30,
+      90
+    ],
+    "ongoing_recheck_days": 30,
+    "reappearance_risk": null
+  },
+  "verification": {
+    "automated_recheck_unavailable": false,
+    "support": "supported"
+  }
+}

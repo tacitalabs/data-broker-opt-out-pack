@@ -1,0 +1,150 @@
+{
+  "category": "genealogy",
+  "contact_phones": [],
+  "coverage": {
+    "backend_cluster_note": null,
+    "coverage_last_verified": null,
+    "covers": [],
+    "parent_broker_id": null,
+    "parent_network": null
+  },
+  "deletion_lane": null,
+  "false_success_traps": [
+    "If the page says there was a problem loading and that the browser is blocking something, the form did not load and nothing can be sent.",
+    "Pressing the send button is not proof. Read what the page says afterward and look for a clear message that the request was received.",
+    "The form may have required parts besides the email address. If any are left empty, the request may not have been sent at all.",
+    "The request is not complete until you click the verification link in the email."
+  ],
+  "genuine_confirmation": null,
+  "id": "familysearch",
+  "knowledge_verification": {
+    "catalog_last_reviewed": "2026-05-31",
+    "dates": {
+      "blind_opt_out": null,
+      "coverage": null,
+      "deletion_lane": null,
+      "knowledge": null,
+      "opt_out_url": null,
+      "playbook": null,
+      "primary_source": null
+    },
+    "evidence_grade": "C",
+    "knowledge_block_status": null,
+    "last_verified": null,
+    "last_verified_source": null,
+    "metadata_confidence": "research_only",
+    "status": "unverified"
+  },
+  "name": "FamilySearch",
+  "opt_out_routes": [
+    {
+      "email": null,
+      "listing_free": null,
+      "method": "web_form",
+      "note": null,
+      "source": "curated",
+      "url": "https://submit-irm.trustarc.com/services/validation/b8d6e704-e5b1-42a0-9f86-bbdec35939a1",
+      "via_broker_id": null
+    },
+    {
+      "email": null,
+      "listing_free": null,
+      "method": "email",
+      "note": null,
+      "source": "module_metadata",
+      "url": null,
+      "via_broker_id": null
+    }
+  ],
+  "opt_out_url_check": {
+    "checked": "2026-11-16",
+    "note": "The page loads with the title \"Data Subject Request Form\". The form itself is drawn by scripts and was not read; without them the page shows a \"problem loading this page\" message. The form is hosted by a privacy-request vendor, not on the FamilySearch address. This check did not confirm from FamilySearch's own site that this is its form.",
+    "result": "loaded",
+    "url": "https://submit-irm.trustarc.com/services/validation/b8d6e704-e5b1-42a0-9f86-bbdec35939a1"
+  },
+  "parent_company": null,
+  "parent_contact_domains": [],
+  "playbook": {
+    "guided_workflow_types": [],
+    "omitted_step_count": 0,
+    "quirks": [],
+    "steps": [
+      "Keep the link to the record you want removed.",
+      "Open the data request form.",
+      "Enter your email address and fill in whatever else the form asks for.",
+      "Send the form.",
+      "Check your email for a verification link and click it to complete the request."
+    ],
+    "steps_source": "curated",
+    "suppression_lane": null
+  },
+  "provenance": [
+    {
+      "field": "false_success_traps",
+      "ref": "https://submit-irm.trustarc.com/services/validation/b8d6e704-e5b1-42a0-9f86-bbdec35939a1",
+      "source": "broker_page"
+    },
+    {
+      "field": "false_success_traps",
+      "ref": "src/brokers/familysearch.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "opt_out_url",
+      "ref": "src/brokers/familysearch.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "requirements",
+      "ref": "src/brokers/familysearch.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "steps",
+      "ref": "src/brokers/familysearch.ts",
+      "source": "module_code"
+    }
+  ],
+  "requirements": {
+    "account": null,
+    "browser_challenge_expected": false,
+    "captcha_expected": false,
+    "captcha_likelihood": "low",
+    "date_of_birth": false,
+    "email_confirmation": true,
+    "government_id": null,
+    "identity_fields": null,
+    "listing_url": null,
+    "manual_fallback_required": false,
+    "phone": null,
+    "required_actions": [],
+    "session_bound_confirmation": false
+  },
+  "site_domains": [
+    "familysearch.org"
+  ],
+  "specialty_report": null,
+  "status": {
+    "listing_discovery_retired": false,
+    "opt_out_support": "unknown",
+    "reason": null,
+    "removal_reliability": "low",
+    "state": "active"
+  },
+  "timing": {
+    "est_processing_days": null,
+    "expected_removal_days": "1-14 days",
+    "expected_turnaround": null,
+    "first_check_days": 14,
+    "later_check_days": [
+      30,
+      90
+    ],
+    "ongoing_recheck_days": 90,
+    "reappearance_risk": null
+  },
+  "verification": {
+    "automated_recheck_unavailable": false,
+    "support": "unsupported"
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "category": "people_search",
+  "contact_phones": [],
+  "coverage": {
+    "backend_cluster_note": null,
+    "coverage_last_verified": null,
+    "covers": [
+      "Addresses.com",
+      "AnyWho",
+      "Background Hawk",
+      "Classmates",
+      "Criminal.com",
+      "CriminalDataCheck",
+      "CriminalRecords.com",
+      "EasyBackgroundChecks",
+      "Instant Checkmate",
+      "InstantCheckSpy",
+      "northcarolina-public-records",
+      "NorthCarolinaPublicRecords.org",
+      "PeopleConnect",
+      "PeopleFind.com",
+      "PeopleFinder",
+      "Public Libraries",
+      "PublicRecords.com",
+      "RecordsPage",
+      "RecordsQuarry",
+      "SheriffsDepartment.net",
+      "Snoopstation",
+      "southcarolina-public-records",
+      "SouthCarolinaPublicRecords.com",
+      "TruthFinder",
+      "US Search",
+      "ZabaSearch"
+    ],
+    "parent_broker_id": null,
+    "parent_network": "PeopleConnect"
+  },
+  "deletion_lane": {
+    "email": null,
+    "last_verified": null,
+    "notes": "Use suppression to stay out of search results. Deletion can clear suppression and let public records return.",
+    "prefer_deletion": false,
+    "via": "in_flow"
+  },
+  "false_success_traps": [
+    "A submitted request is not proof. In one run the listing was still showing at the first recheck after a request. Always check again.",
+    "If the page still shows wording such as \"required\", \"must agree\", or \"invalid\", the email step was refused, even if the page also mentions email.",
+    "The \"check your email\" page is not a suppression. Nothing is hidden until the emailed link is opened and the form is submitted."
+  ],
+  "genuine_confirmation": "After you enter your email, the page tells you to check, verify, or confirm your email. That only means the link was sent. The request is made when you open that link and submit the form behind it.",
+  "id": "intelius",
+  "knowledge_verification": {
+    "catalog_last_reviewed": "2026-05-31",
+    "dates": {
+      "blind_opt_out": null,
+      "coverage": null,
+      "deletion_lane": null,
+      "knowledge": null,
+      "opt_out_url": "2026-07-09",
+      "playbook": "2026-07-09",
+      "primary_source": "2026-07-09"
+    },
+    "evidence_grade": "A",
+    "knowledge_block_status": "supervised_recheck_required",
+    "last_verified": "2026-07-09",
+    "last_verified_source": "playbook",
+    "metadata_confidence": "internal_verified",
+    "status": "verified"
+  },
+  "name": "Intelius",
+  "opt_out_routes": [
+    {
+      "email": null,
+      "listing_free": null,
+      "method": "web_form",
+      "note": null,
+      "source": "curated",
+      "url": "https://suppression.peopleconnect.us/login",
+      "via_broker_id": null
+    },
+    {
+      "email": "privacy@peopleconnect.us",
+      "listing_free": null,
+      "method": "email",
+      "note": "Save the privacy email for a planned rights request, or to follow up when the portal is broken. It is not a stand-in for kept-up suppression.",
+      "source": "module_metadata",
+      "url": null,
+      "via_broker_id": null
+    }
+  ],
+  "opt_out_url_check": {
+    "checked": "2026-11-16",
+    "note": "The page answered with the title \"PeopleConnect - Suppression Center\". Its content is drawn by script, so the form itself was not read.",
+    "result": "loaded",
+    "url": "https://suppression.peopleconnect.us/login"
+  },
+  "parent_company": "PeopleConnect",
+  "parent_contact_domains": [
+    "peopleconnect.us"
+  ],
+  "playbook": {
+    "guided_workflow_types": [
+      "parent_suppression"
+    ],
+    "omitted_step_count": 0,
+    "quirks": [
+      "A deletion email from PeopleConnect can undo suppression. Run the suppression flow again if you get one.",
+      "Enter date of birth as YYYY-MM-DD when the form asks for it.",
+      "Many child brands send privacy links to the Intelius privacy and suppression pages. So the parent suppression result matters more than each child form.",
+      "One request covers four sites.",
+      "Phone, address, or email lookups may still show your details.",
+      "Suppression hides the report from name searches. It does not delete stored data.",
+      "The email link may be tied to the browser session that requested it.",
+      "The link to verify is tied to one browser session. Open it in the same session that asked for it.",
+      "The tool is free. The first step asks only for an email address.",
+      "They are Intelius, TruthFinder, Instant Checkmate, and US Search.",
+      "TruthFinder and PubRec affiliate pages often lead to paid-report funnels. Keep them as parent-family guidance. The exception is a broker-owned result page that our fixtures cover.",
+      "Work this parent before child brands, then recheck children."
+    ],
+    "steps": [
+      "Start at the PeopleConnect Suppression Center. Do not start on a child brand.",
+      "Enter your email address. The site then sends you an email with a link.",
+      "Keep the same assisted browser open while you wait for the email.",
+      "Open the link promptly; the expected window is about 15 minutes.",
+      "Check the details. Then submit the form.",
+      "Treat the result as suppression, then recheck each covered site."
+    ],
+    "steps_source": "source_app_playbook",
+    "suppression_lane": "Suppress the PeopleConnect record and keep it current. This lane keeps related people-search sites from showing the listing."
+  },
+  "provenance": [
+    {
+      "field": "false_success_traps",
+      "ref": "docs/broker-status.md",
+      "source": "repo_doc"
+    },
+    {
+      "field": "false_success_traps",
+      "ref": "src/brokers/intelius.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "genuine_confirmation",
+      "ref": "src/brokers/intelius.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "opt_out_url",
+      "ref": "src/shared/brokerKnowledge.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "requirements",
+      "ref": "src/brokers/intelius.ts",
+      "source": "module_code"
+    }
+  ],
+  "requirements": {
+    "account": null,
+    "browser_challenge_expected": true,
+    "captcha_expected": false,
+    "captcha_likelihood": "medium",
+    "date_of_birth": true,
+    "email_confirmation": true,
+    "government_id": null,
+    "identity_fields": null,
+    "listing_url": false,
+    "manual_fallback_required": true,
+    "phone": null,
+    "required_actions": [
+      "email confirmation possible",
+      "DOB may be required",
+      "session-bound verification link",
+      "browser challenge possible"
+    ],
+    "session_bound_confirmation": true
+  },
+  "site_domains": [
+    "intelius.com"
+  ],
+  "specialty_report": null,
+  "status": {
+    "listing_discovery_retired": false,
+    "opt_out_support": "assisted",
+    "reason": null,
+    "removal_reliability": "medium",
+    "state": "active"
+  },
+  "timing": {
+    "est_processing_days": 7,
+    "expected_removal_days": "1-14 days",
+    "expected_turnaround": null,
+    "first_check_days": 7,
+    "later_check_days": [
+      30,
+      90
+    ],
+    "ongoing_recheck_days": 30,
+    "reappearance_risk": null
+  },
+  "verification": {
+    "automated_recheck_unavailable": false,
+    "support": "supported"
+  }
+}

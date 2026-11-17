@@ -1,0 +1,180 @@
+{
+  "category": "people_search",
+  "contact_phones": [],
+  "coverage": {
+    "backend_cluster_note": null,
+    "coverage_last_verified": null,
+    "covers": [
+      "411"
+    ],
+    "parent_broker_id": null,
+    "parent_network": "Whitepages"
+  },
+  "deletion_lane": {
+    "email": "privacyrequest@whitepages.com",
+    "last_verified": null,
+    "notes": "Email Whitepages for full deletion. This route avoids the phone call in its form.",
+    "prefer_deletion": true,
+    "via": "email"
+  },
+  "false_success_traps": [
+    "A broker acknowledgement is not proof that the listing is gone.",
+    "A page saying the link to the listing is not found or not valid means the request never started.",
+    "A recheck was once recorded as a removal with no screenshot, on a site that shows browser challenges. An empty recheck with no saved proof is not a removal.",
+    "Broker confirmation does not prove removal. The scheduled check still matters.",
+    "If the call is missed or the page does not change within a few minutes, the request was not completed. Start again.",
+    "Loose words like \"removed\" or \"successfully\" elsewhere on the page are not the receipt. Look for the message that the opt-out request was accepted.",
+    "Seeing the four-digit code on the page is not a confirmation. The call must be answered and the code entered."
+  ],
+  "genuine_confirmation": "After you take the phone call and enter the four-digit code, the page changes to say the opt-out request has been accepted. Nothing before that point counts.",
+  "id": "whitepages",
+  "knowledge_verification": {
+    "catalog_last_reviewed": "2026-05-31",
+    "dates": {
+      "blind_opt_out": null,
+      "coverage": null,
+      "deletion_lane": null,
+      "knowledge": "2026-11-16",
+      "opt_out_url": "2026-07-01",
+      "playbook": "2026-07-01",
+      "primary_source": "2026-07-01"
+    },
+    "evidence_grade": "A",
+    "knowledge_block_status": "verified",
+    "last_verified": "2026-11-16",
+    "last_verified_source": "knowledge",
+    "metadata_confidence": "internal_verified",
+    "status": "verified"
+  },
+  "name": "Whitepages",
+  "opt_out_routes": [
+    {
+      "email": null,
+      "listing_free": null,
+      "method": "web_form",
+      "note": null,
+      "source": "module_code",
+      "url": "https://www.whitepages.com/suppression-requests",
+      "via_broker_id": null
+    },
+    {
+      "email": "privacyrequest@whitepages.com",
+      "listing_free": null,
+      "method": "email",
+      "note": "The broker lists a privacy request address. Use it when the phone-code tool is not practical.",
+      "source": "module_metadata",
+      "url": null,
+      "via_broker_id": null
+    }
+  ],
+  "opt_out_url_check": {
+    "checked": "2026-11-16",
+    "note": "A plain request got a \"Just a moment...\" browser check (HTTP 403). The project knowledge file records that the page loaded in a browser on 2026-11-16.",
+    "result": "blocked",
+    "url": "https://www.whitepages.com/suppression-requests"
+  },
+  "parent_company": "Marchex (Whitepages Inc.)",
+  "parent_contact_domains": [],
+  "playbook": {
+    "guided_workflow_types": [
+      "rights_request_email"
+    ],
+    "omitted_step_count": 0,
+    "quirks": [
+      "A broker acknowledgement is not proof that the listing is gone.",
+      "Broker confirmation does not prove removal. The scheduled check still matters.",
+      "Search engines may show old copies of the listing for up to 30 days.",
+      "The automated suppression tool can require a phone callback.",
+      "The opt-out has five steps. It needs no account and no email address.",
+      "Use the privacy-request email lane when a phone call is not practical.",
+      "You must take a phone call to finish the standard flow."
+    ],
+    "steps": [
+      "Open your listing and copy its web link before you start.",
+      "Open the Whitepages opt-out page. Paste the link and press Next.",
+      "Check that the listing is yours. Then choose Remove Me.",
+      "Pick a reason for the request and press Next.",
+      "Enter a phone number. Whitepages calls it to check the request.",
+      "Note the four-digit code on the page. Enter it when the call asks for it.",
+      "Wait for the page to say the removal is in progress. Then plan a recheck."
+    ],
+    "steps_source": "source_app_playbook",
+    "suppression_lane": null
+  },
+  "provenance": [
+    {
+      "field": "false_success_traps",
+      "ref": "docs/broker-status.md",
+      "source": "repo_doc"
+    },
+    {
+      "field": "false_success_traps",
+      "ref": "src/brokers/whitepages.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "genuine_confirmation",
+      "ref": "src/brokers/whitepages.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "opt_out_url",
+      "ref": "src/brokers/whitepages.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "requirements",
+      "ref": "src/brokers/whitepages.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "requirements",
+      "ref": "src/shared/brokerKnowledge.ts",
+      "source": "repo_doc"
+    }
+  ],
+  "requirements": {
+    "account": false,
+    "browser_challenge_expected": true,
+    "captcha_expected": false,
+    "captcha_likelihood": "low",
+    "date_of_birth": false,
+    "email_confirmation": false,
+    "government_id": false,
+    "identity_fields": null,
+    "listing_url": true,
+    "manual_fallback_required": true,
+    "phone": true,
+    "required_actions": [
+      "phone verification possible"
+    ],
+    "session_bound_confirmation": false
+  },
+  "site_domains": [
+    "whitepages.com"
+  ],
+  "specialty_report": null,
+  "status": {
+    "listing_discovery_retired": false,
+    "opt_out_support": "assisted",
+    "reason": null,
+    "removal_reliability": "medium",
+    "state": "active"
+  },
+  "timing": {
+    "est_processing_days": 15,
+    "expected_removal_days": "1-14 days",
+    "expected_turnaround": null,
+    "first_check_days": 15,
+    "later_check_days": [
+      30,
+      90
+    ],
+    "ongoing_recheck_days": 30,
+    "reappearance_risk": null
+  },
+  "verification": {
+    "automated_recheck_unavailable": false,
+    "support": "supported"
+  }
+}

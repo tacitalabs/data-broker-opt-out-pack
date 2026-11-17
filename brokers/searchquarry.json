@@ -1,0 +1,158 @@
+{
+  "category": "people_search",
+  "contact_phones": [],
+  "coverage": {
+    "backend_cluster_note": "InfoTracer and SearchQuarry use a similar form stack and browser challenge. Drift on one should trigger a review of both.",
+    "coverage_last_verified": null,
+    "covers": [],
+    "parent_broker_id": null,
+    "parent_network": null
+  },
+  "deletion_lane": null,
+  "false_success_traps": [
+    "If the page still asks you to enter your information, pick a state, and enter a city, nothing was sent.",
+    "Search results on this site are a partly hidden preview behind a paywall. A later check there gives weak proof either way.",
+    "The optional receipt email can fail with a message that the robot check is not valid. This project treats the removal as accepted in that case, but there is then no email receipt.",
+    "The page that says it is checking whether your data is available is a loading page, not a result.",
+    "The site's name search now hands off to another company's host. It is not confirmed that SearchQuarry still shows its own results page, so a later check may not be able to prove removal."
+  ],
+  "genuine_confirmation": "After you tick your records and press remove, the page speaks about confirmation of your opt-out request and offers to email it to you. The page no longer shows the first form asking for name, state, and city.",
+  "id": "searchquarry",
+  "knowledge_verification": {
+    "catalog_last_reviewed": "2026-05-31",
+    "dates": {
+      "blind_opt_out": null,
+      "coverage": null,
+      "deletion_lane": null,
+      "knowledge": null,
+      "opt_out_url": null,
+      "playbook": null,
+      "primary_source": null
+    },
+    "evidence_grade": "B",
+    "knowledge_block_status": null,
+    "last_verified": null,
+    "last_verified_source": null,
+    "metadata_confidence": "cross_checked",
+    "status": "unverified"
+  },
+  "name": "SearchQuarry",
+  "opt_out_routes": [
+    {
+      "email": null,
+      "listing_free": null,
+      "method": "web_form",
+      "note": null,
+      "source": "module_code",
+      "url": "https://members.searchquarry.com/removeMyData/",
+      "via_broker_id": null
+    }
+  ],
+  "opt_out_url_check": {
+    "checked": "2026-11-16",
+    "note": "HTTP 200. The page title is the SearchQuarry data removal process. The form itself was not seen in a plain page request.",
+    "result": "loaded",
+    "url": "https://members.searchquarry.com/removeMyData/"
+  },
+  "parent_company": "InfoPay",
+  "parent_contact_domains": [],
+  "playbook": {
+    "guided_workflow_types": [],
+    "omitted_step_count": 0,
+    "quirks": [],
+    "steps": [
+      "Open the SearchQuarry data removal page.",
+      "Pass the robot check if one appears.",
+      "Wait while the page says it is checking whether your data is available. The form shows after that.",
+      "On the opt-out form, fill in the first name and last name. Pick the state and fill in the city shown on the listing.",
+      "Pass the robot check again if it appears, then submit. Another robot check may follow.",
+      "The page lists matching records. Tick the ones that are yours and press the remove button.",
+      "The page then offers to email a confirmation of the opt-out request. Enter an email address and send it if you want that receipt. The receipt is optional."
+    ],
+    "steps_source": "curated",
+    "suppression_lane": null
+  },
+  "provenance": [
+    {
+      "field": "false_success_traps",
+      "ref": "docs/broker-status.md",
+      "source": "repo_doc"
+    },
+    {
+      "field": "false_success_traps",
+      "ref": "electron/services/brokerCatalog.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "false_success_traps",
+      "ref": "src/brokers/searchquarry.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "genuine_confirmation",
+      "ref": "src/brokers/searchquarry.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "opt_out_url",
+      "ref": "src/brokers/searchquarry.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "requirements",
+      "ref": "src/brokers/searchquarry.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "steps",
+      "ref": "src/brokers/searchquarry.ts",
+      "source": "module_code"
+    }
+  ],
+  "requirements": {
+    "account": false,
+    "browser_challenge_expected": false,
+    "captcha_expected": true,
+    "captcha_likelihood": "medium",
+    "date_of_birth": false,
+    "email_confirmation": false,
+    "government_id": false,
+    "identity_fields": null,
+    "listing_url": false,
+    "manual_fallback_required": true,
+    "phone": false,
+    "required_actions": [
+      "manual review possible",
+      "CAPTCHA possible"
+    ],
+    "session_bound_confirmation": false
+  },
+  "site_domains": [
+    "members.searchquarry.com",
+    "searchquarry.com"
+  ],
+  "specialty_report": null,
+  "status": {
+    "listing_discovery_retired": false,
+    "opt_out_support": "assisted",
+    "reason": null,
+    "removal_reliability": "low",
+    "state": "active"
+  },
+  "timing": {
+    "est_processing_days": null,
+    "expected_removal_days": "1-14 days",
+    "expected_turnaround": null,
+    "first_check_days": 14,
+    "later_check_days": [
+      30,
+      90
+    ],
+    "ongoing_recheck_days": 60,
+    "reappearance_risk": null
+  },
+  "verification": {
+    "automated_recheck_unavailable": false,
+    "support": "supported"
+  }
+}

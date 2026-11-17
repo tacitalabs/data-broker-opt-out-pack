@@ -1,0 +1,203 @@
+{
+  "category": "people_search",
+  "contact_phones": [],
+  "coverage": {
+    "backend_cluster_note": null,
+    "coverage_last_verified": null,
+    "covers": [
+      "Bumper",
+      "FreePhoneTracer",
+      "MoneyBot5000",
+      "NeighborWho",
+      "NumberGuru",
+      "Ownerly",
+      "PeopleLooker",
+      "PeopleSmart",
+      "ReversePhone"
+    ],
+    "parent_broker_id": null,
+    "parent_network": "The Lifetime Value Co."
+  },
+  "deletion_lane": {
+    "email": "privacy@beenverified.com",
+    "last_verified": null,
+    "notes": "Hide the listing. This is step one. Then email the broker. Ask it to delete your data from: BeenVerified, NeighborWho, Ownerly, NumberGuru, and Bumper.",
+    "prefer_deletion": true,
+    "via": "email_followup"
+  },
+  "false_success_traps": [
+    "A \"Just a moment...\" browser check page is not a result and not a confirmation.",
+    "A message such as \"invalid hCaptcha\", \"could not submit\", or \"please try again\" means nothing was sent, even if other text on the page looks like a confirmation.",
+    "The \"check your email\" page is not the end. The emailed link still has to be clicked.",
+    "The emailed link has the user's email address and a one-time code in it, and the page it opens shows the record's personal details. Keep the link and any picture of that page on the user's machine. Do not copy either into a log, a chat, or another tool.",
+    "The opt-out page links to two more opt-out pages on the same site, one for property records and one for contact records. A people-record opt-out does not cover those.",
+    "When checking later, similar names in other places are not your listing. A \"No exact match\" heading alone is not proof the record is gone. Apply the verification rules.",
+    "Your name can appear as an alias on someone else's record. Do not pick the first record with an opt-out button. Pick the one whose details match your own listing."
+  ],
+  "genuine_confirmation": "After you enter your email and press \"Send Verification Email\", the same page says \"Your request has been received\" and asks you to check your email to verify it (seen 2026-11-16). The page warns the email can take a couple of hours. The request only counts once you click the link in that email. The link opens a page headed \"Your Opt-Out Request Is Confirmed\" that shows the record you picked (seen 2026-11-16). That page, and any later email saying the opt-out is done, show the request was processed. They are not proof the record is gone.",
+  "id": "beenverified",
+  "knowledge_verification": {
+    "catalog_last_reviewed": "2026-05-31",
+    "dates": {
+      "blind_opt_out": null,
+      "coverage": null,
+      "deletion_lane": null,
+      "knowledge": "2026-11-16",
+      "opt_out_url": "2026-07-09",
+      "playbook": "2026-07-09",
+      "primary_source": "2026-07-09"
+    },
+    "evidence_grade": "A",
+    "knowledge_block_status": "verified",
+    "last_verified": "2026-11-16",
+    "last_verified_source": "knowledge",
+    "metadata_confidence": "internal_verified",
+    "status": "verified"
+  },
+  "name": "BeenVerified",
+  "opt_out_routes": [
+    {
+      "email": null,
+      "listing_free": null,
+      "method": "web_form",
+      "note": null,
+      "source": "module_code",
+      "url": "https://www.beenverified.com/app/optout/search",
+      "via_broker_id": null
+    },
+    {
+      "email": "privacy@beenverified.com",
+      "listing_free": null,
+      "method": "email",
+      "note": "Review the match first. Then use the privacy address for rights requests across LTVCo and BeenVerified sites.",
+      "source": "module_metadata",
+      "url": null,
+      "via_broker_id": null
+    }
+  ],
+  "opt_out_url_check": {
+    "checked": "2026-11-16",
+    "note": "A plain request got a \"Just a moment...\" browser check page instead of the form. In an automated browser the same day, the address moved to another page on the same domain and showed a \"Verify you are human\" check that kept coming back, even when a person ticked it. In the user's everyday Chrome the form loaded right away with no check.",
+    "result": "blocked",
+    "url": "https://www.beenverified.com/app/optout/search"
+  },
+  "parent_company": "BeenVerified, Inc.",
+  "parent_contact_domains": [],
+  "playbook": {
+    "guided_workflow_types": [
+      "parent_suppression",
+      "rights_request_email"
+    ],
+    "omitted_step_count": 1,
+    "quirks": [
+      "A BeenVerified opt-out may not clear every LTVCo sister site. Check each one later to be sure.",
+      "BeenVerified says it removes records only from its own site.",
+      "For more records, send an email to the privacy team.",
+      "FreePhoneTracer and NumberGuru are phone-lookup sites. Do not scan them with a name-only search.",
+      "Ownerly and NeighborWho focus on property and address data. Treat them as Extended Records. The exception is when you pick an address workflow on purpose.",
+      "Results here sit behind a paywall. That can limit how much a check can prove.",
+      "The online form removes only one record for each person.",
+      "The opt-out page may show a bot check before the form loads.",
+      "You do not need an account, and the opt-out is free."
+    ],
+    "steps": [
+      "Pick the one record that is yours. Then enter your email address.",
+      "Open the email from BeenVerified and click the link to confirm.",
+      "Wait for a second email that says the opt-out is done.",
+      "Scan again after about 24 hours. Check each sister site as well."
+    ],
+    "steps_source": "source_app_playbook",
+    "suppression_lane": null
+  },
+  "provenance": [
+    {
+      "field": "false_success_traps",
+      "ref": "docs/broker-status.md",
+      "source": "repo_doc"
+    },
+    {
+      "field": "false_success_traps",
+      "ref": "https://www.beenverified.com/app/optout/search (observed 2026-11-16)",
+      "source": "broker_page"
+    },
+    {
+      "field": "false_success_traps",
+      "ref": "src/brokers/beenverified.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "genuine_confirmation",
+      "ref": "docs/BROKERS.md",
+      "source": "repo_doc"
+    },
+    {
+      "field": "genuine_confirmation",
+      "ref": "https://www.beenverified.com/app/optout/search (observed 2026-11-16)",
+      "source": "broker_page"
+    },
+    {
+      "field": "genuine_confirmation",
+      "ref": "src/brokers/beenverified.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "opt_out_url",
+      "ref": "src/brokers/beenverified.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "requirements",
+      "ref": "docs/BROKERS.md",
+      "source": "repo_doc"
+    },
+    {
+      "field": "requirements",
+      "ref": "src/brokers/beenverified.ts",
+      "source": "module_code"
+    }
+  ],
+  "requirements": {
+    "account": false,
+    "browser_challenge_expected": true,
+    "captcha_expected": false,
+    "captcha_likelihood": "low",
+    "date_of_birth": false,
+    "email_confirmation": true,
+    "government_id": false,
+    "identity_fields": null,
+    "listing_url": false,
+    "manual_fallback_required": true,
+    "phone": false,
+    "required_actions": [
+      "email confirmation likely"
+    ],
+    "session_bound_confirmation": false
+  },
+  "site_domains": [
+    "beenverified.com"
+  ],
+  "specialty_report": null,
+  "status": {
+    "listing_discovery_retired": false,
+    "opt_out_support": "assisted",
+    "reason": null,
+    "removal_reliability": "medium",
+    "state": "active"
+  },
+  "timing": {
+    "est_processing_days": null,
+    "expected_removal_days": "1-14 days",
+    "expected_turnaround": null,
+    "first_check_days": 14,
+    "later_check_days": [
+      30,
+      90
+    ],
+    "ongoing_recheck_days": 30,
+    "reappearance_risk": null
+  },
+  "verification": {
+    "automated_recheck_unavailable": false,
+    "support": "supported"
+  }
+}

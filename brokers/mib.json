@@ -1,0 +1,125 @@
+{
+  "category": "specialty_consumer_report",
+  "contact_phones": [],
+  "coverage": {
+    "backend_cluster_note": null,
+    "coverage_last_verified": null,
+    "covers": [],
+    "parent_broker_id": null,
+    "parent_network": null
+  },
+  "deletion_lane": null,
+  "false_success_traps": null,
+  "genuine_confirmation": null,
+  "id": "mib",
+  "knowledge_verification": {
+    "catalog_last_reviewed": null,
+    "dates": {
+      "blind_opt_out": null,
+      "coverage": null,
+      "deletion_lane": null,
+      "knowledge": null,
+      "opt_out_url": null,
+      "playbook": null,
+      "primary_source": null
+    },
+    "evidence_grade": null,
+    "knowledge_block_status": null,
+    "last_verified": null,
+    "last_verified_source": null,
+    "metadata_confidence": null,
+    "status": "unverified"
+  },
+  "name": "MIB, Inc.",
+  "opt_out_routes": [
+    {
+      "email": null,
+      "listing_free": null,
+      "method": "mail",
+      "note": null,
+      "source": "module_metadata",
+      "url": null,
+      "via_broker_id": null
+    }
+  ],
+  "opt_out_url_check": null,
+  "parent_company": "MIB Group",
+  "parent_contact_domains": [],
+  "playbook": {
+    "guided_workflow_types": [],
+    "omitted_step_count": 0,
+    "quirks": [],
+    "steps": null,
+    "steps_source": null,
+    "suppression_lane": null
+  },
+  "provenance": [],
+  "requirements": {
+    "account": null,
+    "browser_challenge_expected": null,
+    "captcha_expected": null,
+    "captcha_likelihood": "low",
+    "date_of_birth": null,
+    "email_confirmation": null,
+    "government_id": null,
+    "identity_fields": [
+      "name",
+      "address",
+      "date_of_birth",
+      "identity_verification"
+    ],
+    "listing_url": null,
+    "manual_fallback_required": null,
+    "phone": null,
+    "required_actions": null,
+    "session_bound_confirmation": null
+  },
+  "site_domains": [
+    "mib.com"
+  ],
+  "specialty_report": {
+    "dispute_guidance": [
+      "Request correction instructions from MIB after obtaining the file.",
+      "Document the specific code or translated condition you are disputing.",
+      "Track both the dispute and any insurer or originating-source follow-up needed."
+    ],
+    "primary_action": "request_report",
+    "request_channels": [
+      "web",
+      "mail",
+      "phone"
+    ],
+    "request_instructions": [
+      "Request your MIB consumer file through the consumer-file request workflow.",
+      "You may only have a file if you applied for individually underwritten insurance with a member carrier.",
+      "Identity verification is expected, so keep request details consistent with your application data."
+    ],
+    "subtype": "medical_underwriting",
+    "supports_deletion": false,
+    "supports_dispute": true,
+    "supports_freeze": false
+  },
+  "status": {
+    "listing_discovery_retired": false,
+    "opt_out_support": null,
+    "reason": "Category anchor provider for medical underwriting files.",
+    "removal_reliability": null,
+    "state": "unsupported"
+  },
+  "timing": {
+    "est_processing_days": null,
+    "expected_removal_days": null,
+    "expected_turnaround": "Consumer disclosure workflow after identity verification",
+    "first_check_days": 14,
+    "later_check_days": [
+      30,
+      90
+    ],
+    "ongoing_recheck_days": 90,
+    "reappearance_risk": null
+  },
+  "verification": {
+    "automated_recheck_unavailable": false,
+    "support": null
+  }
+}

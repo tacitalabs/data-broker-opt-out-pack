@@ -1,0 +1,175 @@
+{
+  "category": "education",
+  "contact_phones": [],
+  "coverage": {
+    "backend_cluster_note": null,
+    "coverage_last_verified": null,
+    "covers": [],
+    "parent_broker_id": "intelius",
+    "parent_network": "PeopleConnect"
+  },
+  "deletion_lane": {
+    "email": null,
+    "last_verified": null,
+    "notes": "Use suppression to stay out of search results. Deletion can clear suppression and let public records return.",
+    "prefer_deletion": false,
+    "via": "in_flow"
+  },
+  "false_success_traps": [
+    "Cancelling or deleting a Classmates account does not hide a people-search result.",
+    "Choosing deletion can clear the suppression and let public records return.",
+    "This project's automation only opens the Suppression Center and saves a picture of it. It sends nothing. That step is not a removal request.",
+    "This project's list of sites covered by one PeopleConnect request names Intelius, TruthFinder, Instant Checkmate, and US Search. It does not name Classmates. Do not assume the Classmates listing is hidden until you have checked it."
+  ],
+  "genuine_confirmation": null,
+  "id": "classmates",
+  "knowledge_verification": {
+    "catalog_last_reviewed": "2026-05-31",
+    "dates": {
+      "blind_opt_out": null,
+      "coverage": null,
+      "deletion_lane": null,
+      "knowledge": null,
+      "opt_out_url": null,
+      "playbook": null,
+      "primary_source": null
+    },
+    "evidence_grade": "C",
+    "knowledge_block_status": null,
+    "last_verified": null,
+    "last_verified_source": null,
+    "metadata_confidence": "research_only",
+    "status": "unverified"
+  },
+  "name": "Classmates",
+  "opt_out_routes": [
+    {
+      "email": null,
+      "listing_free": null,
+      "method": "web_form",
+      "note": null,
+      "source": "curated",
+      "url": "https://suppression.peopleconnect.us/login",
+      "via_broker_id": null
+    },
+    {
+      "email": null,
+      "listing_free": null,
+      "method": "parent_company_portal",
+      "note": null,
+      "source": "ownership_cluster",
+      "url": null,
+      "via_broker_id": "intelius"
+    }
+  ],
+  "opt_out_url_check": {
+    "checked": "2026-11-16",
+    "note": "The page loads with the title \"PeopleConnect - Suppression Center\". Its form is drawn by scripts and was not read. This is the parent company's page, not a Classmates page.",
+    "result": "loaded",
+    "url": "https://suppression.peopleconnect.us/login"
+  },
+  "parent_company": "PeopleConnect/Intelius",
+  "parent_contact_domains": [],
+  "playbook": {
+    "guided_workflow_types": [
+      "parent_suppression"
+    ],
+    "omitted_step_count": 0,
+    "quirks": [
+      "Do not cancel or delete an account as a way to hide a people-search result."
+    ],
+    "steps": [
+      "Open the PeopleConnect Suppression Center. Classmates belongs to PeopleConnect, and this project sends Classmates requests there.",
+      "Enter your email address. The site sends you an email with a link.",
+      "Open the link and follow the suppression steps.",
+      "Choose suppression. Keep your record set to \"Suppressed\". Do not choose deletion.",
+      "Afterward, check your Classmates listing again."
+    ],
+    "steps_source": "curated",
+    "suppression_lane": "Use the PeopleConnect suppression portal. It keeps this result hidden."
+  },
+  "provenance": [
+    {
+      "field": "false_success_traps",
+      "ref": "electron/services/brokerCatalog.ts",
+      "source": "repo_doc"
+    },
+    {
+      "field": "false_success_traps",
+      "ref": "src/brokers/classmates.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "false_success_traps",
+      "ref": "src/shared/brokerKnowledge.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "false_success_traps",
+      "ref": "src/shared/deletionLanes.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "opt_out_url",
+      "ref": "src/shared/deletionLanes.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "requirements",
+      "ref": "src/shared/brokerKnowledge.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "steps",
+      "ref": "src/brokers/classmates.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "steps",
+      "ref": "src/shared/brokerKnowledge.ts",
+      "source": "module_code"
+    }
+  ],
+  "requirements": {
+    "account": null,
+    "browser_challenge_expected": false,
+    "captcha_expected": false,
+    "captcha_likelihood": "medium",
+    "date_of_birth": false,
+    "email_confirmation": true,
+    "government_id": null,
+    "identity_fields": null,
+    "listing_url": false,
+    "manual_fallback_required": true,
+    "phone": null,
+    "required_actions": [],
+    "session_bound_confirmation": false
+  },
+  "site_domains": [
+    "classmates.com"
+  ],
+  "specialty_report": null,
+  "status": {
+    "listing_discovery_retired": false,
+    "opt_out_support": "unknown",
+    "reason": null,
+    "removal_reliability": "low",
+    "state": "active"
+  },
+  "timing": {
+    "est_processing_days": null,
+    "expected_removal_days": "1-14 days",
+    "expected_turnaround": null,
+    "first_check_days": 14,
+    "later_check_days": [
+      30,
+      90
+    ],
+    "ongoing_recheck_days": 90,
+    "reappearance_risk": null
+  },
+  "verification": {
+    "automated_recheck_unavailable": false,
+    "support": "unsupported"
+  }
+}

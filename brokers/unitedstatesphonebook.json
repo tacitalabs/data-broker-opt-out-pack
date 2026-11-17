@@ -1,0 +1,160 @@
+{
+  "category": "people_search",
+  "contact_phones": [],
+  "coverage": {
+    "backend_cluster_note": null,
+    "coverage_last_verified": null,
+    "covers": [],
+    "parent_broker_id": null,
+    "parent_network": null
+  },
+  "deletion_lane": null,
+  "false_success_traps": [
+    "A sent contact form is not proof the broker accepted the request. If no clear receipt message shows after you submit, report the request as unconfirmed.",
+    "The site has been very slow and has shown \"no match\" pages that did not agree with a manual look. An empty result is not proof of removal.",
+    "This is a general contact form, not a removal tool. No confirmation wording for it is recorded in this project."
+  ],
+  "genuine_confirmation": null,
+  "id": "unitedstatesphonebook",
+  "knowledge_verification": {
+    "catalog_last_reviewed": "2026-05-31",
+    "dates": {
+      "blind_opt_out": null,
+      "coverage": null,
+      "deletion_lane": null,
+      "knowledge": null,
+      "opt_out_url": null,
+      "playbook": null,
+      "primary_source": null
+    },
+    "evidence_grade": "B",
+    "knowledge_block_status": null,
+    "last_verified": null,
+    "last_verified_source": null,
+    "metadata_confidence": "cross_checked",
+    "status": "unverified"
+  },
+  "name": "UnitedStatesPhoneBook",
+  "opt_out_routes": [
+    {
+      "email": null,
+      "listing_free": null,
+      "method": "web_form",
+      "note": null,
+      "source": "module_metadata",
+      "url": null,
+      "via_broker_id": null
+    },
+    {
+      "email": null,
+      "listing_free": null,
+      "method": "web_form",
+      "note": null,
+      "source": "curated",
+      "url": "https://www.unitedstatesphonebook.com/contact.php",
+      "via_broker_id": null
+    }
+  ],
+  "opt_out_url_check": {
+    "checked": "2026-11-16",
+    "note": "A plain request got a \"Just a moment...\" browser check (HTTP 403). A real browser is needed.",
+    "result": "blocked",
+    "url": "https://www.unitedstatesphonebook.com/contact.php"
+  },
+  "parent_company": null,
+  "parent_contact_domains": [],
+  "playbook": {
+    "guided_workflow_types": [],
+    "omitted_step_count": 0,
+    "quirks": [],
+    "steps": [
+      "Have the link to your listing ready.",
+      "Open the UnitedStatesPhoneBook contact page in a normal browser. Solve the human check if one appears.",
+      "On the opt-out form, fill in the name shown on the listing.",
+      "Add the listed phone number if you want. This project treats it as optional.",
+      "In the message box, ask for your personal information to be removed and paste the link to your listing.",
+      "Solve any human check, then send the form.",
+      "Save a screenshot of the page that follows.",
+      "Check the listing again later. The site is slow and can give uneven results, so try more than once."
+    ],
+    "steps_source": "curated",
+    "suppression_lane": null
+  },
+  "provenance": [
+    {
+      "field": "false_success_traps",
+      "ref": "docs/broker-status.md",
+      "source": "repo_doc"
+    },
+    {
+      "field": "false_success_traps",
+      "ref": "src/brokers/unitedstatesphonebook.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "opt_out_url",
+      "ref": "src/brokers/unitedstatesphonebook.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "requirements",
+      "ref": "src/brokers/unitedstatesphonebook.ts",
+      "source": "module_code"
+    },
+    {
+      "field": "steps",
+      "ref": "docs/broker-status.md",
+      "source": "repo_doc"
+    },
+    {
+      "field": "steps",
+      "ref": "src/brokers/unitedstatesphonebook.ts",
+      "source": "module_code"
+    }
+  ],
+  "requirements": {
+    "account": false,
+    "browser_challenge_expected": true,
+    "captcha_expected": true,
+    "captcha_likelihood": "low",
+    "date_of_birth": false,
+    "email_confirmation": false,
+    "government_id": false,
+    "identity_fields": null,
+    "listing_url": true,
+    "manual_fallback_required": true,
+    "phone": false,
+    "required_actions": [
+      "CAPTCHA possible",
+      "site slowness possible"
+    ],
+    "session_bound_confirmation": false
+  },
+  "site_domains": [
+    "unitedstatesphonebook.com"
+  ],
+  "specialty_report": null,
+  "status": {
+    "listing_discovery_retired": false,
+    "opt_out_support": "assisted",
+    "reason": null,
+    "removal_reliability": "low",
+    "state": "active"
+  },
+  "timing": {
+    "est_processing_days": null,
+    "expected_removal_days": "1-14 days",
+    "expected_turnaround": null,
+    "first_check_days": 14,
+    "later_check_days": [
+      30,
+      90
+    ],
+    "ongoing_recheck_days": 60,
+    "reappearance_risk": null
+  },
+  "verification": {
+    "automated_recheck_unavailable": false,
+    "support": "supported"
+  }
+}
